@@ -1,23 +1,23 @@
 const CORE = {
   slides: [
     {
-      tag: 'Dinh dưỡng thuần tự nhiên',
-      title: 'KHOẺ ĐẸP\nTỪ GỐC',
-      desc: 'Hành trình chăm sóc sức khoẻ bắt đầu từ bên trong — với nền tảng dinh dưỡng đúng, bền vững và toàn diện.',
+      tag: 'Dược sĩ · Chuyên gia sức khoẻ & vóc dáng',
+      title: 'VŨ QUỲNH\nTRANG',
+      desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm trong ngành. Đồng hành giúp bạn tự chỉnh vóc dáng và chăm sóc sức khoẻ của chính mình.',
       img: './assets/slider1.png',
       emoji: '🌿'
     },
     {
-      tag: 'Chương trình cá nhân hoá',
-      title: 'GIẢM CÂN\nBỀN VỮNG',
-      desc: 'Không ăn kiêng khắc nghiệt — chỉ cần đúng dinh dưỡng, đúng thời điểm và có người đồng hành.',
+      tag: 'Diễn giả · Chia sẻ kiến thức sức khoẻ',
+      title: 'TRUYỀN\nCẢM HỨNG',
+      desc: 'Tham gia hàng loạt sự kiện với vai trò diễn giả — chia sẻ kiến thức thực tiễn về sức khoẻ, dinh dưỡng và lối sống lành mạnh.',
       img: './assets/slider2.png',
-      emoji: '⚖️'
+      emoji: '🎤'
     },
     {
-      tag: '500+ khách hàng hài lòng',
-      title: 'TỰ TIN\nMỖI NGÀY',
-      desc: 'Vẻ đẹp thực sự đến từ sức khoẻ bên trong — khi cơ thể khoẻ, bạn toả sáng tự nhiên.',
+      tag: 'Phương pháp khoa học · Không áp lực',
+      title: 'KHOẺ ĐẸP\nTỪ GỐC',
+      desc: 'Không ăn kiêng cực đoan, không phụ thuộc — chỉ cần đúng kiến thức, đúng phương pháp và có người đồng hành thực sự hiểu bạn.',
       img: './assets/slider1.png',
       emoji: '✨'
     }
