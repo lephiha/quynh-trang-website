@@ -18,7 +18,7 @@ const CORE = {
       tag: '500+ khách hàng hài lòng',
       title: 'TỰ TIN\nMỖI NGÀY',
       desc: 'Vẻ đẹp thực sự đến từ sức khoẻ bên trong — khi cơ thể khoẻ, bạn toả sáng tự nhiên.',
-      img: './assets/slider3.png',
+      img: './assets/slider1.png',
       emoji: '✨'
     }
   ]

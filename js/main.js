@@ -82,3 +82,37 @@ if (sections.length && navLinks.length) {
   }, { threshold: 0.4 });
   sections.forEach(s => sectionObserver.observe(s));
 }
+
+// ── Counter animation ─────────────────────────
+function animateCounter(el, target, duration = 2000) {
+  const suffix = el.dataset.suffix || '+';
+  let startTime = null;
+
+  const step = timestamp => {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // easeOutExpo — mượt hơn easeOutQuart
+    const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    el.textContent = Math.floor(ease * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target + suffix; // đảm bảo đúng số cuối
+  };
+
+  requestAnimationFrame(step);
+}
+
+// Trigger khi badge vào viewport
+const statNum = document.querySelector('.stat-circle-num');
+if (statNum) {
+  const target = parseInt(statNum.dataset.target);
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(statNum, target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterObserver.observe(statNum);
+}
