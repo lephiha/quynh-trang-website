@@ -17,15 +17,15 @@
      NAVBAR
 ══════════════════════════════════════════ -->
 <header class="navbar" id="navbar">
-  <a href="index.html" class="logo">
-        <img src="./assets/logo.png" alt="FitX-06 Logo">
-            <div class="logo-text">
-                <span class="logo-name">
-                    <span class="logo-white">FITX</span><span class="logo-orange">-06</span>
-                </span>
-                <span class="logo-subtitle">Tập Là Thích</span>
-            </div>
-        </a>
+  <a href="index.html" class="navbar-logo">
+    <img src="./assets/logo.png" alt="Core+ Logo">
+    <div class="logo-text">
+        <span class="logo-name">
+        <span class="logo-main">Core</span><span class="logo-accent">+</span>
+        </span>
+        <span class="logo-subtitle">Khoẻ Đẹp Từ Gốc</span>
+    </div>
+</a>
 
   <nav class="navbar-nav" id="navMenu">
     <a href="#about">Về Chúng Tôi</a>
@@ -43,105 +43,15 @@
   </div>
 </header>
 
-<!-- ══════════════════════════════════════════
-     HERO
-══════════════════════════════════════════ -->
-<section class="hero" id="hero">
-  <div class="hero-bg">
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
-    <div class="hero-leaves">
-      <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-        <g opacity="0.07">
-          <ellipse cx="120" cy="80" rx="60" ry="100" fill="#4e9a72" transform="rotate(-30 120 80)"/>
-          <ellipse cx="700" cy="150" rx="50" ry="90" fill="#4e9a72" transform="rotate(20 700 150)"/>
-          <ellipse cx="650" cy="480" rx="70" ry="110" fill="#4e9a72" transform="rotate(-15 650 480)"/>
-          <ellipse cx="80" cy="450" rx="45" ry="80" fill="#4e9a72" transform="rotate(40 80 450)"/>
-          <circle cx="400" cy="300" r="180" fill="none" stroke="#4e9a72" stroke-width="1.5"/>
-          <circle cx="400" cy="300" r="240" fill="none" stroke="#4e9a72" stroke-width="0.8"/>
-        </g>
-      </svg>
-    </div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-badge fade-in" data-delay="100">
-      <span class="dot"></span>
-      <span>Dinh dưỡng thuần tự nhiên</span>
-    </div>
-
-    <h1 class="display-xl hero-title">
-      <span class="line" id="heroLine1">Khoẻ Đẹp</span>
-      <span class="line italic text-green" id="heroLine2">Từ Gốc</span>
-    </h1>
-
-    <p class="body-lg hero-desc fade-up" data-delay="400">
-      Hành trình chăm sóc sức khoẻ bắt đầu từ bên trong —<br/>
-      với nền tảng dinh dưỡng đúng, bền vững và toàn diện.
-    </p>
-
-    <div class="hero-actions fade-up" data-delay="600">
-      <a href="#products" class="btn btn-primary">
-        Khám Phá Sản Phẩm
-        <span>→</span>
-      </a>
-      <a href="pages/contact.html" class="btn btn-ghost">
-        Tư Vấn Miễn Phí
-        <span class="arrow">↗</span>
-      </a>
-    </div>
-
-    <div class="hero-stats fade-up" data-delay="800">
-      <div class="stat">
-        <span class="stat-num">500<span class="plus">+</span></span>
-        <span class="stat-label">Khách hàng hài lòng</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">5<span class="plus">+</span></span>
-        <span class="stat-label">Năm kinh nghiệm</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">100<span class="plus">%</span></span>
-        <span class="stat-label">Tự nhiên & an toàn</span>
+<!-- HERO SLIDER -->
+<section id="hero">
+  <div id="slider-section">
+    <div class="slider-outer" id="sliderOuter">
+      <div class="slider-inner" id="sliderInner"></div>
+      <div class="slider-ui">
+        <div class="slider-dots" id="sliderDots"></div>
       </div>
     </div>
-  </div>
-
-  <div class="hero-visual fade-in" data-delay="300">
-    <div class="hero-card-float card-float-1">
-      <span class="card-float-icon">🌿</span>
-      <div>
-        <div class="card-float-title">Giảm 8kg</div>
-        <div class="card-float-sub">trong 3 tháng</div>
-      </div>
-    </div>
-    <div class="hero-img-wrap">
-      <div class="hero-img-placeholder">
-        <div class="placeholder-inner">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-            <circle cx="60" cy="40" r="22" fill="#4e9a72" opacity="0.6"/>
-            <path d="M20 100 Q60 65 100 100" fill="#4e9a72" opacity="0.4"/>
-            <ellipse cx="60" cy="72" rx="28" ry="14" fill="#3a7a5a" opacity="0.3"/>
-          </svg>
-          <p class="text-soft body-sm" style="margin-top:1rem;text-align:center;">Ảnh hero sẽ được<br/>đặt vào đây</p>
-        </div>
-      </div>
-    </div>
-    <div class="hero-card-float card-float-2">
-      <span class="card-float-icon">⭐</span>
-      <div>
-        <div class="card-float-title">4.9/5</div>
-        <div class="card-float-sub">đánh giá từ khách hàng</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span class="label">Cuộn xuống</span>
   </div>
 </section>
 
