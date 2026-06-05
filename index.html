@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core+ — Khoẻ Đẹp Từ Gốc</title>
+  <meta name="description" content="Core+ – Giải pháp dinh dưỡng & sức khoẻ toàn diện. Khoẻ đẹp từ gốc với các sản phẩm thuần tự nhiên." />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <a href="index.html" class="logo">
+        <img src="./assets/logo.png" alt="FitX-06 Logo">
+            <div class="logo-text">
+                <span class="logo-name">
+                    <span class="logo-white">FITX</span><span class="logo-orange">-06</span>
+                </span>
+                <span class="logo-subtitle">Tập Là Thích</span>
+            </div>
+        </a>
+
+  <nav class="navbar-nav" id="navMenu">
+    <a href="#about">Về Chúng Tôi</a>
+    <a href="#products">Sản Phẩm</a>
+    <a href="#stories">Hành Trình</a>
+    <a href="pages/blog.html">Blog</a>
+    <a href="pages/contact.html">Liên Hệ</a>
+  </nav>
+
+  <div class="navbar-cta">
+    <a href="pages/contact.html" class="btn btn-outline">Đặt Lịch Tư Vấn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-leaves">
+      <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <g opacity="0.07">
+          <ellipse cx="120" cy="80" rx="60" ry="100" fill="#4e9a72" transform="rotate(-30 120 80)"/>
+          <ellipse cx="700" cy="150" rx="50" ry="90" fill="#4e9a72" transform="rotate(20 700 150)"/>
+          <ellipse cx="650" cy="480" rx="70" ry="110" fill="#4e9a72" transform="rotate(-15 650 480)"/>
+          <ellipse cx="80" cy="450" rx="45" ry="80" fill="#4e9a72" transform="rotate(40 80 450)"/>
+          <circle cx="400" cy="300" r="180" fill="none" stroke="#4e9a72" stroke-width="1.5"/>
+          <circle cx="400" cy="300" r="240" fill="none" stroke="#4e9a72" stroke-width="0.8"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge fade-in" data-delay="100">
+      <span class="dot"></span>
+      <span>Dinh dưỡng thuần tự nhiên</span>
+    </div>
+
+    <h1 class="display-xl hero-title">
+      <span class="line" id="heroLine1">Khoẻ Đẹp</span>
+      <span class="line italic text-green" id="heroLine2">Từ Gốc</span>
+    </h1>
+
+    <p class="body-lg hero-desc fade-up" data-delay="400">
+      Hành trình chăm sóc sức khoẻ bắt đầu từ bên trong —<br/>
+      với nền tảng dinh dưỡng đúng, bền vững và toàn diện.
+    </p>
+
+    <div class="hero-actions fade-up" data-delay="600">
+      <a href="#products" class="btn btn-primary">
+        Khám Phá Sản Phẩm
+        <span>→</span>
+      </a>
+      <a href="pages/contact.html" class="btn btn-ghost">
+        Tư Vấn Miễn Phí
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="hero-stats fade-up" data-delay="800">
+      <div class="stat">
+        <span class="stat-num">500<span class="plus">+</span></span>
+        <span class="stat-label">Khách hàng hài lòng</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">5<span class="plus">+</span></span>
+        <span class="stat-label">Năm kinh nghiệm</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">100<span class="plus">%</span></span>
+        <span class="stat-label">Tự nhiên & an toàn</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual fade-in" data-delay="300">
+    <div class="hero-card-float card-float-1">
+      <span class="card-float-icon">🌿</span>
+      <div>
+        <div class="card-float-title">Giảm 8kg</div>
+        <div class="card-float-sub">trong 3 tháng</div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img-placeholder">
+        <div class="placeholder-inner">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="40" r="22" fill="#4e9a72" opacity="0.6"/>
+            <path d="M20 100 Q60 65 100 100" fill="#4e9a72" opacity="0.4"/>
+            <ellipse cx="60" cy="72" rx="28" ry="14" fill="#3a7a5a" opacity="0.3"/>
+          </svg>
+          <p class="text-soft body-sm" style="margin-top:1rem;text-align:center;">Ảnh hero sẽ được<br/>đặt vào đây</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card-float card-float-2">
+      <span class="card-float-icon">⭐</span>
+      <div>
+        <div class="card-float-title">4.9/5</div>
+        <div class="card-float-sub">đánh giá từ khách hàng</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span class="label">Cuộn xuống</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TRUST BAR
+══════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <span class="trust-icon">🌱</span>
+      <span>100% Thành phần tự nhiên</span>
+    </div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">
+      <span class="trust-icon">🔬</span>
+      <span>Được kiểm nghiệm lâm sàng</span>
+    </div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">
+      <span class="trust-icon">🤝</span>
+      <span>Tư vấn 1:1 cá nhân hoá</span>
+    </div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">
+      <span class="trust-icon">📦</span>
+      <span>Giao hàng toàn quốc</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<section id="about" class="section about-section">
+  <div class="about-grid">
+    <div class="about-media fade-in">
+      <div class="about-img-main">
+        <div class="about-img-placeholder">
+          <span style="font-size:3rem;">🌿</span>
+          <p class="text-soft body-sm" style="text-align:center;margin-top:.5rem;">Ảnh về tôi</p>
+        </div>
+      </div>
+      <div class="about-badge-stat">
+        <div class="stat-circle">
+          <span class="stat-circle-num">5+</span>
+          <span class="stat-circle-label">năm<br/>đồng hành</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <div class="section-label fade-up">
+        <span class="label">Về Chúng Tôi</span>
+      </div>
+      <h2 class="display-lg fade-up" data-delay="100">
+        Đồng hành trên<br/>
+        <span class="italic text-green">hành trình khoẻ đẹp</span>
+      </h2>
+      <div class="divider fade-up" data-delay="200"></div>
+      <p class="body-lg fade-up" data-delay="300">
+        Core+ ra đời từ niềm tin rằng sức khoẻ tốt không đến từ may mắn —
+        mà từ những lựa chọn đúng đắn mỗi ngày, được xây trên nền tảng dinh dưỡng khoa học.
+      </p>
+      <p class="fade-up" data-delay="400" style="color:var(--text-soft);margin-top:1rem;">
+        Chúng tôi không chỉ cung cấp sản phẩm — mà đồng hành cùng bạn
+        trong từng bước chuyển hoá, từ tư vấn cá nhân đến theo dõi tiến trình.
+      </p>
+      <div class="about-features fade-up" data-delay="500">
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <span>Chương trình cá nhân hoá theo thể trạng</span>
+        </div>
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <span>Hỗ trợ tư vấn dinh dưỡng không giới hạn</span>
+        </div>
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <span>Theo dõi & điều chỉnh liên tục</span>
+        </div>
+      </div>
+      <a href="pages/about.html" class="btn btn-ghost fade-up" data-delay="600" style="margin-top:2rem;">
+        Đọc thêm về chúng tôi
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRODUCTS / SOLUTIONS
+══════════════════════════════════════════ -->
+<section id="products" class="section-full products-section">
+  <div class="section" style="padding-bottom:0;">
+    <div class="section-label fade-up">
+      <span class="label">Giải Pháp</span>
+    </div>
+    <div class="products-header">
+      <h2 class="display-lg fade-up" data-delay="100">
+        Sản phẩm &<br/><span class="italic text-green">Chương trình</span>
+      </h2>
+      <a href="pages/products.html" class="btn btn-outline fade-up" data-delay="200">Xem tất cả</a>
+    </div>
+  </div>
+
+  <div class="products-grid" data-stagger>
+    <div class="product-card card">
+      <div class="product-thumb" style="background:linear-gradient(135deg,#d4ede0,#a8d5bc);">
+        <span class="product-icon">⚖️</span>
+      </div>
+      <div class="product-body">
+        <span class="label">Phổ biến nhất</span>
+        <h3 class="display-md" style="margin-top:.5rem;">Quản Lý Cân Nặng</h3>
+        <p class="body-sm text-soft" style="margin-top:.75rem;">
+          Giảm hoặc tăng cân lành mạnh với chương trình dinh dưỡng được cá nhân hoá theo từng mục tiêu.
+        </p>
+        <a href="pages/products.html#weight" class="btn btn-ghost" style="margin-top:1.5rem;padding-left:0;">
+          Tìm hiểu ngay <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="product-card card product-card-featured">
+      <div class="product-thumb" style="background:linear-gradient(135deg,#2d5a45,#3a7a5a);">
+        <span class="product-icon">💚</span>
+      </div>
+      <div class="product-body">
+        <span class="label" style="color:var(--green-pale);">Nổi bật</span>
+        <h3 class="display-md" style="margin-top:.5rem;color:var(--cream);">Dinh Dưỡng Toàn Diện</h3>
+        <p class="body-sm" style="margin-top:.75rem;color:var(--green-pale);">
+          Bổ sung đầy đủ vi chất, protein, và năng lượng — nền tảng cho cơ thể khoẻ mạnh mỗi ngày.
+        </p>
+        <a href="pages/products.html#nutrition" class="btn btn-ghost" style="margin-top:1.5rem;padding-left:0;color:var(--cream);">
+          Tìm hiểu ngay <span class="arrow" style="background:rgba(255,255,255,0.15);">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="product-card card">
+      <div class="product-thumb" style="background:linear-gradient(135deg,#edf7f2,#d4ede0);">
+        <span class="product-icon">✨</span>
+      </div>
+      <div class="product-body">
+        <span class="label">Làm đẹp từ bên trong</span>
+        <h3 class="display-md" style="margin-top:.5rem;">Collagen & Làm Đẹp</h3>
+        <p class="body-sm text-soft" style="margin-top:.75rem;">
+          Nuôi dưỡng làn da, tóc và móng từ gốc rễ — vẻ đẹp tự nhiên không cần che phủ.
+        </p>
+        <a href="pages/products.html#beauty" class="btn btn-ghost" style="margin-top:1.5rem;padding-left:0;">
+          Tìm hiểu ngay <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SUCCESS STORIES
+══════════════════════════════════════════ -->
+<section id="stories" class="section stories-section">
+  <div class="section-label fade-up">
+    <span class="label">Hành Trình Thực Tế</span>
+  </div>
+  <h2 class="display-lg fade-up" data-delay="100">
+    Câu chuyện<br/><span class="italic text-green">thành công</span>
+  </h2>
+  <p class="body-lg fade-up" data-delay="200" style="max-width:500px;color:var(--text-soft);margin-top:1rem;margin-bottom:3rem;">
+    Hàng trăm khách hàng đã thay đổi cuộc sống — đây là hành trình của họ.
+  </p>
+
+  <div class="stories-grid" data-stagger>
+    <div class="story-card card">
+      <div class="story-before-after">
+        <div class="story-img story-img-placeholder">
+          <span style="font-size:2rem;">👤</span>
+          <span class="story-tag">Trước</span>
+        </div>
+        <div class="story-arrow">→</div>
+        <div class="story-img story-img-placeholder story-img-after">
+          <span style="font-size:2rem;">🌟</span>
+          <span class="story-tag story-tag-after">Sau</span>
+        </div>
+      </div>
+      <div class="story-body">
+        <div class="story-result">
+          <span class="story-num">-12kg</span>
+          <span class="story-period">/ 4 tháng</span>
+        </div>
+        <p class="body-sm text-soft" style="margin-top:.5rem;">
+          "Tôi không ngờ chỉ sau 4 tháng lại có thể thay đổi nhiều đến vậy. Core+ không chỉ là sản phẩm — là người đồng hành."
+        </p>
+        <div class="story-author">
+          <div class="author-avatar">TL</div>
+          <div>
+            <div style="font-weight:500;font-size:.875rem;">Thảo Linh, 32 tuổi</div>
+            <div class="label" style="margin-top:2px;">Hà Nội</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card card">
+      <div class="story-before-after">
+        <div class="story-img story-img-placeholder">
+          <span style="font-size:2rem;">👤</span>
+          <span class="story-tag">Trước</span>
+        </div>
+        <div class="story-arrow">→</div>
+        <div class="story-img story-img-placeholder story-img-after">
+          <span style="font-size:2rem;">💪</span>
+          <span class="story-tag story-tag-after">Sau</span>
+        </div>
+      </div>
+      <div class="story-body">
+        <div class="story-result">
+          <span class="story-num">+8kg</span>
+          <span class="story-period">/ 3 tháng</span>
+        </div>
+        <p class="body-sm text-soft" style="margin-top:.5rem;">
+          "Từ nhỏ đã gầy, ăn bao nhiêu cũng không lên cân. Sau 3 tháng với Core+ thì cơ thể tôi đã thay đổi hoàn toàn."
+        </p>
+        <div class="story-author">
+          <div class="author-avatar" style="background:var(--green-mid);">MH</div>
+          <div>
+            <div style="font-weight:500;font-size:.875rem;">Minh Hoàng, 28 tuổi</div>
+            <div class="label" style="margin-top:2px;">TP. HCM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card card">
+      <div class="story-before-after">
+        <div class="story-img story-img-placeholder">
+          <span style="font-size:2rem;">👤</span>
+          <span class="story-tag">Trước</span>
+        </div>
+        <div class="story-arrow">→</div>
+        <div class="story-img story-img-placeholder story-img-after">
+          <span style="font-size:2rem;">✨</span>
+          <span class="story-tag story-tag-after">Sau</span>
+        </div>
+      </div>
+      <div class="story-body">
+        <div class="story-result">
+          <span class="story-num">Sáng da</span>
+          <span class="story-period">/ 2 tháng</span>
+        </div>
+        <p class="body-sm text-soft" style="margin-top:.5rem;">
+          "Không chỉ đẹp hơn từ bên ngoài — cảm giác khoẻ từ bên trong mới là điều tôi trân trọng nhất."
+        </p>
+        <div class="story-author">
+          <div class="author-avatar" style="background:var(--gold-accent);">NP</div>
+          <div>
+            <div style="font-weight:500;font-size:.875rem;">Ngọc Phương, 35 tuổi</div>
+            <div class="label" style="margin-top:2px;">Đà Nẵng</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:3rem;" class="fade-up">
+    <a href="pages/stories.html" class="btn btn-outline">Xem thêm hành trình →</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════════ -->
+<section class="cta-banner fade-up">
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="cta-content">
+    <span class="label" style="color:var(--green-pale);">Bắt đầu ngay hôm nay</span>
+    <h2 class="display-lg" style="color:var(--cream);margin-top:.75rem;">
+      Sẵn sàng bắt đầu<br/>
+      <span class="italic">hành trình của bạn?</span>
+    </h2>
+    <p style="color:var(--green-pale);margin-top:1rem;max-width:460px;line-height:1.7;">
+      Đặt lịch tư vấn miễn phí 30 phút — chúng tôi sẽ giúp bạn
+      tìm ra chương trình phù hợp nhất với thể trạng và mục tiêu.
+    </p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+      <a href="pages/contact.html" class="btn" style="background:var(--cream);color:var(--green-deep);">
+        Đặt Lịch Tư Vấn Ngay →
+      </a>
+      <a href="tel:+84xxxxxxxxx" class="btn btn-ghost" style="color:var(--green-pale);">
+        <span class="arrow" style="background:rgba(255,255,255,0.1);">📞</span>
+        Gọi ngay
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="navbar-logo" style="margin-bottom:1rem;">
+        <div class="logo-icon">🌿</div>
+        <span class="logo-text text-cream">Core<sup style="color:var(--green-soft)">+</sup></span>
+      </div>
+      <p style="color:var(--green-pale);font-size:.9rem;line-height:1.7;max-width:260px;">
+        Khoẻ đẹp từ gốc — xây dựng nền tảng sức khoẻ bền vững cho bạn và gia đình.
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Facebook">f</a>
+        <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+        <a href="#" class="social-btn" aria-label="YouTube">yt</a>
+        <a href="#" class="social-btn" aria-label="Zalo">z</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-col-title">Trang</div>
+        <a href="pages/about.html">Về Chúng Tôi</a>
+        <a href="pages/products.html">Sản Phẩm</a>
+        <a href="pages/stories.html">Hành Trình</a>
+        <a href="pages/blog.html">Blog</a>
+        <a href="pages/contact.html">Liên Hệ</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Dịch Vụ</div>
+        <a href="#">Quản lý cân nặng</a>
+        <a href="#">Dinh dưỡng toàn diện</a>
+        <a href="#">Collagen & Làm đẹp</a>
+        <a href="#">Tư vấn 1:1</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Liên Hệ</div>
+        <a href="tel:+84xxxxxxxxx">📞 +84 xxx xxx xxx</a>
+        <a href="mailto:hello@coreplus.vn">✉️ hello@coreplus.vn</a>
+        <span style="color:var(--green-pale);font-size:.875rem;">📍 Hà Nội, Việt Nam</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Core+. All rights reserved.</span>
+    <span>Khoẻ Đẹp Từ Gốc 🌿</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/home.js" defer></script>
+</body>
+</html>
