@@ -308,11 +308,36 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── Footer ───────────────────────────────── */
 .footer {
   background: var(--green-deep);
-  color: var(--cream);
-  padding: var(--space-lg) var(--space-md) var(--space-md);
+  padding: 1.25rem var(--space-md) 0.75rem;
 }
-.footer a { color: var(--green-pale); transition: color var(--dur-fast); }
-.footer a:hover { color: var(--cream); }
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-nav {
+  display: flex;
+  gap: 1.75rem;
+  margin-left: auto;
+}
+.footer-nav a {
+  font-size: .825rem;
+  color: var(--green-pale);
+  transition: color var(--dur-fast);
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-copy {
+  max-width: 1200px;
+  margin: 0.6rem auto 0;
+  display: block;
+  text-align: center;
+  font-size: .78rem;
+  color: var(--green-pale);
+}
 
 /* ── Divider ──────────────────────────────── */
 .divider {

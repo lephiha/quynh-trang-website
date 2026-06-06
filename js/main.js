@@ -32,26 +32,25 @@ if (menuToggle && navMenu) {
 
 // ── Scroll reveal (IntersectionObserver) ────
 const revealEls = document.querySelectorAll('.fade-up, .fade-in, .scale-in');
-const observer  = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const delay = entry.target.dataset.delay || 0;
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, delay);
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 
 revealEls.forEach(el => observer.observe(el));
 
 // ── Stagger children ─────────────────────────
 document.querySelectorAll('[data-stagger]').forEach(parent => {
-  const children = parent.children;
-  Array.from(children).forEach((child, i) => {
-    child.dataset.delay = i * 120;
-    child.classList.add('fade-up');
+  const children = Array.from(parent.children);
+  children.forEach((child, i) => {
+    child.style.opacity = '0';
+    child.style.transform = 'translateY(40px)';
+    child.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
     observer.observe(child);
   });
 });

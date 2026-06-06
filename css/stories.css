@@ -1,0 +1,255 @@
+/* ============================================
+   CORE+ — Stories Page Styles
+   ============================================ */
+
+/* ── Hero ─────────────────────────────────── */
+.stories-hero {
+  padding: calc(var(--space-xl) + 5rem) var(--space-md) var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stories-hero-inner { max-width: 640px; }
+
+/* ── Stats bar ────────────────────────────── */
+.stories-stats-bar {
+  background: var(--green-foam);
+  border-top: 1px solid rgba(168,213,188,0.3);
+  border-bottom: 1px solid rgba(168,213,188,0.3);
+  padding: 1.5rem var(--space-md);
+}
+.stories-stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+.stories-stat {
+  text-align: center;
+}
+.stories-stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  line-height: 1;
+}
+.stories-stat-num sup {
+  font-size: 1.2rem;
+  color: var(--green-main);
+}
+.stories-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.stories-stat-divider {
+  width: 1px; height: 48px;
+  background: var(--green-mist);
+}
+
+/* ── Filter bar ───────────────────────────── */
+.stories-filter-bar {
+  border-bottom: 1px solid rgba(168,213,188,0.25);
+  background: var(--warm-white);
+  position: sticky;
+  top: 68px;
+  z-index: 100;
+}
+.stories-filter-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.stories-filter-inner::-webkit-scrollbar { display: none; }
+.filter-btn {
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--dur-fast);
+  margin-bottom: -1px;
+}
+.filter-btn:hover { color: var(--green-main); }
+.filter-btn.active {
+  color: var(--green-main);
+  border-bottom-color: var(--green-main);
+}
+
+/* ── Main grid ────────────────────────────── */
+.stories-main {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+.stories-grid-full {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ── Story card ───────────────────────────── */
+.story-full-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(168,213,188,0.3);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--dur-mid) var(--ease-smooth);
+}
+.story-full-card:hover { box-shadow: var(--shadow-md); }
+
+/* Card header */
+.story-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(168,213,188,0.2);
+}
+.story-card-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 600;
+  color: var(--cream);
+  flex-shrink: 0;
+  border: 2px solid var(--green-mist);
+}
+.story-card-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+.story-card-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.story-card-pills {
+  margin-left: auto;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.story-pill-sm {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background: var(--green-foam);
+  color: var(--green-main);
+  border: 1px solid var(--green-mist);
+  white-space: nowrap;
+}
+
+/* Result bar */
+.story-result-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--green-foam);
+  border-bottom: 1px solid rgba(168,213,188,0.2);
+  flex-wrap: wrap;
+}
+.story-result-item { text-align: center; }
+.story-result-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green-main);
+  line-height: 1;
+}
+.story-result-key {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.story-result-divider {
+  width: 1px; height: 36px;
+  background: var(--green-mist);
+}
+
+/* FB Embed */
+.story-fb-embed {
+  width: 100%;
+  overflow: hidden;
+  background: #f0f2f5;
+  flex: 1;
+}
+.story-fb-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* Empty */
+.stories-empty {
+  text-align: center;
+  padding: var(--space-lg);
+  color: var(--text-soft);
+  grid-column: 1 / -1;
+}
+
+/* ── CTA ──────────────────────────────────── */
+.stories-cta-section {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.stories-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(107,184,144,0.2), transparent 60%);
+  pointer-events: none;
+}
+.stories-cta-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 900px) {
+  .stories-grid-full { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .stories-hero { padding-top: calc(var(--space-lg) + 4rem); }
+  .stories-stats-inner { gap: var(--space-md); }
+  .stories-stat-divider { display: none; }
+  .story-card-pills { display: none; }
+  .story-result-bar { gap: 1rem; }
+} 

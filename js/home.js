@@ -303,3 +303,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ── Contact Form ──────────────────────────
+function submitContactForm() {
+  const name  = document.getElementById('fName')?.value.trim();
+  const phone = document.getElementById('fPhone')?.value.trim();
+  const goal  = document.getElementById('fGoal')?.value.trim();
+  if (!name || !phone) {
+    alert('Vui lòng điền họ tên và số điện thoại nhé!');
+    return;
+  }
+  document.getElementById('formBox').style.display    = 'none';
+  document.getElementById('formSuccess').style.display = 'flex';
+}
+
+lucide.createIcons();
