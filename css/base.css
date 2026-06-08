@@ -395,7 +395,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: rgba(0,0,0,0.22);
   opacity: 0; pointer-events: none;
   transition: opacity 0.25s;
-  z-index: 260;
+  z-index: 2999; /* above most site layers */
 }
 .sidebar-backdrop.open { opacity: 1; pointer-events: all; }
 
@@ -408,11 +408,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: -18px 0 60px rgba(0,0,0,0.14);
-  transform: translateX(105%);   /* ẩn mặc định */
+  transform: translateX(105%);   /* hidden by default */
   transition: transform 0.32s cubic-bezier(0.2,0.9,0.2,1);
-  z-index: 261;
+  z-index: 3000; /* ensure sits above navbar and other elements */
   display: flex; flex-direction: column;
   overflow: hidden;
+  pointer-events: auto;
 }
 .sidebar.open { transform: translateX(0); }
 
@@ -438,6 +439,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--text-mid); cursor: pointer; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-size: 1rem; transition: background 0.2s;
+  z-index: 3001; /* sit above the sidebar panel */
+  pointer-events: auto;
 }
 .sidebar-close:hover { background: rgba(0,0,0,0.06); }
 
@@ -459,3 +462,36 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .sidebar-cta-wrap { padding: 1rem 1.5rem 2rem; flex-shrink: 0; }
 .sidebar-cta-wrap .btn { width: 100%; justify-content: center; }
+
+/* ── Floating Action Button (FAB) — Zalo + Phone */
+.fab {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  z-index: 4000;
+}
+.fab-btn {
+  width: 52px; height: 52px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; background: #222; box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  text-decoration: none; transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.fab-btn:active { transform: scale(0.96); }
+.fab .fab-sub { opacity: 0; transform: translateY(8px) scale(0.95); pointer-events: none; }
+.fab.open .fab-sub { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.fab .fab-zalo { background: #1ea1f1; }
+.fab .fab-phone { background: #e34b3a; }
+.fab .fab-main {
+  width: 64px; height: 64px; background: var(--green-main); font-size: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(58,122,90,0.28);
+}
+.fab .fab-tip { font-size: 0.85rem; color: var(--text-dark); background: var(--cream); padding: 0.4rem 0.6rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+@media (min-width: 900px) {
+  .fab { right: 28px; bottom: 28px; }
+}
