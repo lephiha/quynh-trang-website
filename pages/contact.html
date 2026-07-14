@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên Hệ — Vũ Quỳnh Trang</title>
+  <meta name="description" content="Đăng ký tư vấn miễn phí cùng Vũ Quỳnh Trang. Điền form hoặc liên hệ trực tiếp qua Hotline, Zalo, Facebook Messenger." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/mobile.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <a href="../index.html" class="navbar-logo">
+    <img src="../assets/logo.png" alt="Vũ Quỳnh Trang">
+    <div class="logo-text">
+      <span class="logo-name">
+        <span class="logo-main">Quỳnh</span><span class="logo-accent">Trang</span>
+      </span>
+    </div>
+  </a>
+  <nav class="navbar-nav" id="navMenu">
+    <a href="about.html">Về Tôi</a>
+    <a href="../index.html#stories">Hành Trình</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" style="color:var(--green-main);">Liên Hệ</a>
+  </nav>
+  <div class="navbar-cta">
+    <a href="contact.html" class="btn btn-outline">Đặt Lịch Tư Vấn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <img src="../assets/logo.png" alt="Logo" class="sidebar-brand-img"/>
+      <span class="sidebar-brand-name"><span>Quỳnh</span><span class="accent">Trang</span></span>
+    </div>
+    <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+  </div>
+  <nav class="sidebar-nav-links">
+    <a href="about.html">Về Tôi</a>
+    <a href="../index.html#stories">Hành Trình</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+  </nav>
+  <div class="sidebar-cta-wrap">
+    <a href="contact.html" class="btn btn-primary">Đặt Lịch Tư Vấn</a>
+  </div>
+</aside>
+
+<!-- CONTACT -->
+<section class="contact-section" style="padding-top:calc(var(--space-xl) + 5rem);">
+  <div class="contact-bg-orb contact-orb-1"></div>
+  <div class="contact-bg-orb contact-orb-2"></div>
+
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-label fade-up">
+        <span class="label">Liên Hệ</span>
+      </div>
+      <h1 class="display-xl contact-h2 fade-up" data-delay="100">
+        Sẵn sàng<br/>
+        <span class="italic text-green">thay đổi?</span>
+      </h1>
+      <p class="body-lg fade-up" data-delay="200" style="color:var(--text-soft);margin-top:1rem;max-width:380px;">
+        Điền form hoặc nhắn tin trực tiếp. Quỳnh Trang sẽ phản hồi trong 24 giờ
+        và thiết kế chương trình riêng cho bạn.
+      </p>
+
+      <div class="contact-links fade-up" data-delay="300">
+        <a href="tel:0983068530" class="contact-link-item">
+          <div class="contact-link-icon"><i data-lucide="phone"></i></div>
+          <div>
+            <div class="label">Hotline</div>
+            <div class="contact-link-val">0983 068 530</div>
+          </div>
+        </a>
+        <a href="https://zalo.me/0983068530" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.477 2 2 6.268 2 11.5c0 2.7 1.18 5.13 3.07 6.87L4 22l3.85-1.27A10.1 10.1 0 0012 21c5.523 0 10-4.268 10-9.5S17.523 2 12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M7.5 13.5s.75-1 2-1 1.75 1 3 1 2-1 2-1M8 9h1m6 0h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="label">Zalo</div>
+            <div class="contact-link-val">0983 068 530</div>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/messages/t/quynhtrang" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.922 1.401 5.53 3.593 7.255V22l3.287-1.88C9.9 20.366 10.933 20.5 12 20.5c5.523 0 10-4.145 10-9.257C22 6.145 17.523 2 12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M7 13l2.5-3.5L12 11.5l2.5-3.5L17 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="label">Facebook Messenger</div>
+            <div class="contact-link-val">Chat trực tiếp qua Facebook</div>
+          </div>
+        </a>
+        <a href="mailto:hello@quynhtrang.vn" class="contact-link-item">
+          <div class="contact-link-icon"><i data-lucide="mail"></i></div>
+          <div>
+            <div class="label">Email</div>
+            <div class="contact-link-val">hello@quynhtrang.vn</div>
+          </div>
+        </a>
+        <div class="contact-link-item">
+          <div class="contact-link-icon"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="label">Địa chỉ</div>
+            <div class="contact-link-val">TT17 Văn Phú (Ngã tư Hoàng Đôn Hòa – Hà Trì), Hà Đông, Hà Nội</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right fade-up" data-delay="200">
+      <div class="contact-form-panel" id="formBox">
+        <div class="contact-form-header">
+          <h3 class="display-md">Đăng ký tư vấn<br/><span class="italic text-green">miễn phí</span></h3>
+          <p class="body-sm text-soft" style="margin-top:.5rem;">Chỉ mất 1 phút — nhận chương trình cá nhân hoá trong 24h</p>
+        </div>
+
+        <div class="f-group">
+          <label class="f-label">Họ và tên</label>
+          <input class="f-input" type="text" id="fName" placeholder="Nguyễn Thị A"/>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Số điện thoại / Zalo</label>
+          <input class="f-input" type="tel" id="fPhone" placeholder="0983 068 530"/>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Mục tiêu của bạn</label>
+          <textarea class="f-input f-textarea" rows="4" id="fGoal"
+            placeholder="VD: Tôi muốn giảm 8kg, hết đau lưng, cải thiện vóc dáng trong 3 tháng..."></textarea>
+        </div>
+        <button class="f-submit btn btn-primary" onclick="submitContactForm()">
+          Gửi yêu cầu tư vấn →
+        </button>
+      </div>
+
+      <div class="f-success" id="formSuccess">
+        <div class="f-success-icon">✓</div>
+        <h3 class="display-md" style="margin-top:1rem;">Đã nhận thông tin!</h3>
+        <p class="body-lg text-soft" style="margin-top:.75rem;">
+          Chị Quỳnh Trang sẽ liên hệ bạn trong vòng 24 giờ.<br/>
+          Cảm ơn bạn đã tin tưởng và đồng hành cùng tôi 🌿
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/logo.png" alt="Quỳnh Trang" class="footer-avatar"/>
+      <div class="logo-text">
+        <span class="logo-name" style="font-size:1rem;">
+          <span style="color:var(--cream);font-weight:400;">Vũ Quỳnh</span><span class="logo-accent">Trang</span>
+        </span>
+      </div>
+    </a>
+    <nav class="footer-nav">
+      <a href="about.html">Về Tôi</a>
+      <a href="../index.html#stories">Hành Trình</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Liên Hệ</a>
+    </nav>
+    <span class="footer-copy">© 2026 Vũ Quỳnh Trang. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  function submitContactForm() {
+    const name  = document.getElementById('fName')?.value.trim();
+    const phone = document.getElementById('fPhone')?.value.trim();
+    if (!name || !phone) {
+      alert('Vui lòng điền họ tên và số điện thoại nhé!');
+      return;
+    }
+    document.getElementById('formBox').style.display    = 'none';
+    document.getElementById('formSuccess').style.display = 'flex';
+  }
+  lucide.createIcons();
+</script>
+</body>
+</html>
