@@ -3,21 +3,21 @@ const CORE = {
     {
       tag: 'Dược sĩ · Chuyên gia sức khoẻ & vóc dáng',
       title: 'VŨ QUỲNH\nTRANG',
-      desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm trong ngành. Đồng hành giúp bạn tự chỉnh vóc dáng và chăm sóc sức khoẻ của chính mình.',
+      desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm trong ngành. Đồng hành cùng bạn xây dựng tư duy, thói quen và sức khỏe bền vững từ chính những thay đổi nhỏ mỗi ngày.',
       img: './assets/slider1.png',
       emoji: '🌿'
     },
     {
       tag: 'Diễn giả · Chia sẻ kiến thức sức khoẻ',
       title: 'TRUYỀN\nCẢM HỨNG',
-      desc: 'Tham gia hàng loạt sự kiện với vai trò diễn giả — chia sẻ kiến thức thực tiễn về sức khoẻ, dinh dưỡng và lối sống lành mạnh.',
+      desc: 'Tham gia hàng loạt sự kiện với vai trò diễn giả — Lan toả những giá trị giúp mỗi người chủ động chăm sóc sức khoẻ và xây dựng lối sống lành mạnh.',
       img: './assets/slider2.png',
       emoji: '🎤'
     },
     {
       tag: 'Phương pháp khoa học · Không áp lực',
       title: 'KHOẺ ĐẸP\nTỪ GỐC',
-      desc: 'Không ăn kiêng cực đoan, không phụ thuộc — chỉ cần đúng kiến thức, đúng phương pháp và có người đồng hành thực sự hiểu bạn.',
+      desc: 'Mỗi thay đổi bền vững đều bắt đầu từ tư duy đúng, thói quen đúng và sự kiên trì mỗi ngày.',
       img: './assets/slider1.png',
       emoji: '✨'
     }

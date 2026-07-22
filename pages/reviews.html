@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews — Vũ Quỳnh Trang</title>
+  <meta name="description" content="Đánh giá và phản hồi thực tế từ những người đã đồng hành cùng Vũ Quỳnh Trang." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/stories.css" />
+  <link rel="stylesheet" href="../css/mobile.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <a href="../index.html" class="navbar-logo">
+    <img src="../assets/logo.png" alt="Vũ Quỳnh Trang">
+    <div class="logo-text">
+      <span class="logo-name"><span class="logo-main">Quỳnh</span><span class="logo-accent">Trang</span></span>
+    </div>
+  </a>
+  <nav class="navbar-nav" id="navMenu">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="about.html">Về Tôi</a>
+    <a href="stories.html">Hành Trình</a>
+    <a href="media.html">Multimedia Zone</a>
+    <a href="reviews.html" class="nav-active">Reviews</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+  </nav>
+  <div class="navbar-cta">
+    <a href="contact.html" class="btn btn-outline">Đặt Lịch Tư Vấn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <img src="../assets/logo.png" alt="Logo" class="sidebar-brand-img"/>
+      <span class="sidebar-brand-name"><span>Quỳnh</span><span class="accent">Trang</span></span>
+    </div>
+    <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+  </div>
+  <nav class="sidebar-nav-links">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="about.html">Về Tôi</a>
+    <a href="stories.html">Hành Trình</a>
+    <a href="media.html">Multimedia Zone</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+  </nav>
+  <div class="sidebar-cta-wrap">
+    <a href="contact.html" class="btn btn-primary">Đặt Lịch Tư Vấn</a>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section class="stories-hero">
+  <div class="stories-hero-inner">
+    <div class="section-label fade-up">
+      <span class="label">Reviews</span>
+    </div>
+    <h1 class="display-xl fade-up" data-delay="100">
+      Học viên<br/>
+      <span class="italic text-green">nói gì về tôi</span>
+    </h1>
+    <p class="body-lg fade-up" data-delay="200" style="color:var(--text-soft);max-width:520px;margin-top:1.25rem;">
+      Những phản hồi thật, ngắn gọn — từ những người đã trực tiếp
+      đồng hành cùng tôi trên hành trình thay đổi.
+    </p>
+  </div>
+</section>
+
+<main class="stories-main section">
+  <div class="stories-grid-full" id="reviewsGrid" style="grid-template-columns:repeat(3,1fr);">
+
+    <!-- TODO: thay bằng review thật (có thể nhúng FB/TikTok khi có link) -->
+    <article class="story-full-card fade-up">
+      <div class="story-card-header">
+        <div class="story-card-avatar" style="background:var(--green-mid);">T</div>
+        <div>
+          <div class="story-card-name">Chị T.</div>
+          <div class="story-card-sub">Hà Nội</div>
+        </div>
+      </div>
+      <div style="padding:1.5rem;">
+        <p class="story-quote" style="margin:0;">
+          "Lưng mở hơn. Vai cân hơn. Dáng đứng vững hơn — và quan trọng nhất, tôi không còn sợ cử động nữa."
+        </p>
+      </div>
+    </article>
+
+    <article class="story-full-card fade-up" data-delay="120">
+      <div class="story-card-header">
+        <div class="story-card-avatar" style="background:var(--green-main);">M</div>
+        <div>
+          <div class="story-card-name">Chị M.</div>
+          <div class="story-card-sub">TP. HCM</div>
+        </div>
+      </div>
+      <div style="padding:1.5rem;">
+        <p class="story-quote" style="margin:0;">
+          "Vòng eo nhỏ lại là kết quả — nhưng hết đau lưng mới là điều tôi trân trọng nhất."
+        </p>
+      </div>
+    </article>
+
+    <article class="story-full-card fade-up" data-delay="240">
+      <div class="story-card-header">
+        <div class="story-card-avatar" style="background:var(--gold-accent);">H</div>
+        <div>
+          <div class="story-card-name">Chị H.</div>
+          <div class="story-card-sub">Hà Nội</div>
+        </div>
+      </div>
+      <div style="padding:1.5rem;">
+        <p class="story-quote" style="margin:0;">
+          "Lưng thẳng, người nhẹ, không còn đau — 3 tháng mà tôi như sống lại một lần nữa."
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <div style="text-align:center;margin-top:3rem;" class="fade-up">
+    <p style="color:var(--text-soft);margin-bottom:1rem;">
+      Chị Quỳnh Trang sẽ cập nhật thêm review mới tại đây thường xuyên.
+    </p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/logo.png" alt="Quỳnh Trang" class="footer-avatar"/>
+      <div class="logo-text">
+        <span class="logo-name" style="font-size:1rem;">
+          <span style="color:var(--cream);font-weight:400;">Vũ Quỳnh</span><span class="logo-accent">Trang</span>
+        </span>
+      </div>
+    </a>
+    <nav class="footer-nav">
+      <a href="about.html">Về Tôi</a>
+      <a href="stories.html">Hành Trình</a>
+      <a href="media.html">Multimedia Zone</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Liên Hệ</a>
+    </nav>
+    <span class="footer-copy">© 2026 Vũ Quỳnh Trang. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

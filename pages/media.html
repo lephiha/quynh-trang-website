@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multimedia Zone — Vũ Quỳnh Trang</title>
+  <meta name="description" content="Video, chia sẻ trực tiếp và khoảnh khắc thực tế từ hành trình đồng hành cùng Vũ Quỳnh Trang." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/mobile.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <a href="../index.html" class="navbar-logo">
+    <img src="../assets/logo.png" alt="Vũ Quỳnh Trang">
+    <div class="logo-text">
+      <span class="logo-name"><span class="logo-main">Quỳnh</span><span class="logo-accent">Trang</span></span>
+    </div>
+  </a>
+  <nav class="navbar-nav" id="navMenu">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="about.html">Về Tôi</a>
+    <a href="stories.html">Hành Trình</a>
+    <a href="media.html" class="nav-active">Multimedia Zone</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+  </nav>
+  <div class="navbar-cta">
+    <a href="contact.html" class="btn btn-outline">Đặt Lịch Tư Vấn</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <img src="../assets/logo.png" alt="Logo" class="sidebar-brand-img"/>
+      <span class="sidebar-brand-name"><span>Quỳnh</span><span class="accent">Trang</span></span>
+    </div>
+    <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+  </div>
+  <nav class="sidebar-nav-links">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="about.html">Về Tôi</a>
+    <a href="stories.html">Hành Trình</a>
+    <a href="media.html">Multimedia Zone</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+  </nav>
+  <div class="sidebar-cta-wrap">
+    <a href="contact.html" class="btn btn-primary">Đặt Lịch Tư Vấn</a>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="section-label fade-up">
+      <span class="label">Multimedia Zone</span>
+    </div>
+    <h1 class="display-xl fade-up" data-delay="100">
+      Xem tôi<br/>
+      <span class="italic text-green">chia sẻ trực tiếp</span>
+    </h1>
+    <p class="body-lg fade-up" data-delay="200" style="color:var(--text-soft);max-width:520px;margin-top:1.25rem;">
+      Video ngắn, chia sẻ thực tế và những khoảnh khắc đời thường
+      trong hành trình đồng hành cùng học viên.
+    </p>
+  </div>
+</section>
+
+<main class="blog-main section">
+  <div class="blog-grid" id="mediaGrid">
+
+    <!-- TODO: thay link nhúng khi có trang Facebook/TikTok cá nhân mới của chị Trang -->
+    <article class="blog-full-card">
+      <div class="blog-full-body">
+        <div class="blog-meta">
+          <span class="blog-date">Sắp cập nhật</span>
+        </div>
+        <h2 class="blog-full-title">Video sẽ được cập nhật tại đây</h2>
+        <div class="blog-fb-embed" style="min-height:280px;align-items:center;">
+          <p style="color:var(--text-muted);font-size:.85rem;padding:2rem;text-align:center;">
+            Chỗ này sẽ nhúng video Facebook/TikTok cá nhân của chị Quỳnh Trang
+            khi có link chính thức.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- TODO: thay link nhúng khi có trang Facebook/TikTok cá nhân mới của chị Trang -->
+    <article class="blog-full-card">
+      <div class="blog-full-body">
+        <div class="blog-meta">
+          <span class="blog-date">Sắp cập nhật</span>
+        </div>
+        <h2 class="blog-full-title">Video sẽ được cập nhật tại đây</h2>
+        <div class="blog-fb-embed" style="min-height:280px;align-items:center;">
+          <p style="color:var(--text-muted);font-size:.85rem;padding:2rem;text-align:center;">
+            Chỗ này sẽ nhúng video Facebook/TikTok cá nhân của chị Quỳnh Trang
+            khi có link chính thức.
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<section class="blog-cta-section">
+  <div class="blog-cta-inner">
+    <h2 class="display-md fade-up">Muốn được tư vấn trực tiếp?</h2>
+    <p class="body-lg fade-up" data-delay="100" style="color:var(--text-soft);margin-top:.75rem;">
+      Đặt lịch tư vấn miễn phí — Quỳnh Trang sẽ thiết kế chương trình riêng cho bạn.
+    </p>
+    <a href="contact.html" class="btn btn-primary fade-up" data-delay="200" style="margin-top:1.75rem;">
+      Đặt lịch ngay →
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/logo.png" alt="Quỳnh Trang" class="footer-avatar"/>
+      <div class="logo-text">
+        <span class="logo-name" style="font-size:1rem;">
+          <span style="color:var(--cream);font-weight:400;">Vũ Quỳnh</span><span class="logo-accent">Trang</span>
+        </span>
+      </div>
+    </a>
+    <nav class="footer-nav">
+      <a href="about.html">Về Tôi</a>
+      <a href="stories.html">Hành Trình</a>
+      <a href="media.html">Multimedia Zone</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Liên Hệ</a>
+    </nav>
+    <span class="footer-copy">© 2026 Vũ Quỳnh Trang. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), +(e.target.dataset.delay || 0));
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+  lucide.createIcons();
+</script>
+</body>
+</html>
