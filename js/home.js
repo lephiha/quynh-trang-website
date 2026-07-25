@@ -3,21 +3,21 @@ const CORE = {
     {
       tag: 'Dược sĩ · Chuyên gia sức khoẻ & vóc dáng',
       title: 'VŨ QUỲNH\nTRANG',
-      desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm trong ngành. Đồng hành cùng bạn xây dựng tư duy, thói quen và sức khỏe bền vững từ chính những thay đổi nhỏ mỗi ngày.',
+      desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm kinh nghiệm. Giúp bạn thay đổi từ tư duy, xây dựng thói quen đúng, cải thiện vóc dáng và kiến tạo sức khỏe bền vững từ gốc.',
       img: './assets/slider1.png',
       emoji: '🌿'
     },
     {
       tag: 'Diễn giả · Chia sẻ kiến thức sức khoẻ',
       title: 'TRUYỀN\nCẢM HỨNG',
-      desc: 'Tham gia hàng loạt sự kiện với vai trò diễn giả — Lan toả những giá trị giúp mỗi người chủ động chăm sóc sức khoẻ và xây dựng lối sống lành mạnh.',
+      desc: 'Truyền cảm hứng và dẫn dắt mỗi người biến kiến thức thành hành động — từ thay đổi tư duy đến xây dựng một lối sống khỏe mạnh, chủ động và bền vững.',
       img: './assets/slider2.png',
       emoji: '🎤'
     },
     {
       tag: 'Phương pháp khoa học · Không áp lực',
       title: 'KHOẺ ĐẸP\nTỪ GỐC',
-      desc: 'Mỗi thay đổi bền vững đều bắt đầu từ tư duy đúng, thói quen đúng và sự kiên trì mỗi ngày.',
+      desc: 'Một lộ trình thay đổi toàn diện: tư duy đúng, thói quen đúng, vóc dáng cân đối và sức khỏe bền vững.',
       img: './assets/slider1.png',
       emoji: '✨'
     }
@@ -320,7 +320,9 @@ function submitContactForm() {
   const phone = document.getElementById('fPhone')?.value.trim();
   const goal  = document.getElementById('fGoal')?.value.trim();
   if (!name || !phone) {
-    alert('Vui lòng điền họ tên và số điện thoại nhé!');
+    alert(document.documentElement.lang === 'en'
+      ? 'Please enter your full name and phone number.'
+      : 'Vui lòng điền họ tên và số điện thoại nhé!');
     return;
   }
   document.getElementById('formBox').style.display    = 'none';

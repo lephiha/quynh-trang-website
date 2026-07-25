@@ -29,10 +29,12 @@
     ', được nuôi dưỡng bằng': ', nurtured by',
     'thói quen tích cực': 'positive habits',
     ', thì vóc dáng và sức khỏe sẽ dần chuyển biến theo một cách tự nhiên và bền vững.': ', the body and overall health can improve naturally and sustainably.',
-    'Tôi không mong mình trở thành người thay đổi cuộc sống của ai. Điều tôi mong muốn là được chia sẻ kiến thức, kinh nghiệm và đồng hành để mỗi người có thêm niềm tin, động lực và phương pháp phù hợp, từ đó chủ động kiến tạo một phiên bản khỏe mạnh và hạnh phúc hơn của chính mình.': 'I do not seek to change anyone’s life for them. I hope to share knowledge and experience, and offer support so each person can find the confidence, motivation, and right approach to create a healthier, happier version of themselves.',
+    'Tôi giúp mỗi người tạo ra sự thay đổi bền vững trong cuộc sống — bắt đầu từ': 'I help people create lasting change in their lives — beginning with',
+    ', hình thành': ', developing',
+    ', cải thiện vóc dáng và xây dựng sức khỏe từ gốc. Bằng kiến thức, kinh nghiệm và một lộ trình phù hợp, tôi dẫn dắt bạn từng bước kiến tạo phiên bản khỏe mạnh, tự tin và hạnh phúc hơn của chính mình.': ', improving their physique, and building health from within. Through expertise, experience, and a personalized roadmap, I guide you step by step toward a healthier, more confident, and happier version of yourself.',
     'Dược sĩ Đại học Dược Hà Nội • Hơn 18 năm kinh nghiệm': 'Hanoi University of Pharmacy graduate • Over 18 years of experience',
-    'Đồng hành xây dựng tư duy đúng và thói quen sống lành mạnh': 'Supporting the right mindset and healthy lifestyle habits',
-    'Hướng đến vóc dáng cân đối, sức khỏe bền vững và cuộc sống cân bằng': 'Working toward a balanced physique, lasting health, and a balanced life',
+    'Dẫn dắt thay đổi từ tư duy đúng đến thói quen sống lành mạnh': 'Guiding change from the right mindset to healthy lifestyle habits',
+    'Kiến tạo vóc dáng cân đối, sức khỏe bền vững và cuộc sống cân bằng': 'Creating a balanced physique, lasting health, and a balanced life',
     'Đọc thêm về tôi': 'Read more about me',
     'Hành Trình Thực Tế': 'Real Journeys',
     'Những thay đổi': 'Transformations',
@@ -56,7 +58,7 @@
     'Một hệ cơ lõi vững chắc không chỉ tạo đường cong săn chắc vùng bụng đùi mà còn cải thiện tư thế, giảm đau mỏi lưng và tăng sức bền từ bên trong.': 'A strong core not only shapes and tones the body, but also improves posture, eases back discomfort, and builds strength from within.',
     'Hãy bắt đầu': 'Begin',
     'hành trình của bạn': 'your journey',
-    'Đăng ký': 'Register for a',
+    'Đăng ký': 'Book a',
     'tư vấn': 'consultation',
     'Họ và tên': 'Full name',
     'Số điện thoại / Zalo': 'Phone number / Zalo',
@@ -97,13 +99,75 @@
     'Đăng ký tư vấn': 'Book a consultation',
     'miễn phí': 'free',
     'Chỉ mất 1 phút — nhận chương trình cá nhân hoá trong 24h': 'It only takes one minute — receive a personalized plan within 24 hours',
+    'trong lĩnh vực chăm sóc sức khỏe. Mỗi chặng đường làm nghề đều giúp tôi hiểu rằng sức khỏe là nền tảng để mỗi người tận hưởng cuộc sống một cách trọn vẹn hơn.': 'in healthcare. Every stage of my career has shown me that health is the foundation for living life more fully.',
+    'Trong suốt hành trình làm nghề, tôi đã gặp rất nhiều người mong muốn cải thiện vóc dáng, sức khỏe và chất lượng cuộc sống. Điều tôi nhận ra là, khi thay đổi bắt đầu từ': 'Throughout my career, I have met many people seeking to improve their physique, health, and quality of life. I have learned that when change begins with',
+    ', được nuôi dưỡng bằng': ', and is nurtured by',
+    'Tôi là': 'I am',
+    ', Dược sĩ tốt nghiệp Đại học Dược Hà Nội với hơn': ', a pharmacist who graduated from Hanoi University of Pharmacy with over',
+    'Hành trình lan tỏa': 'A journey of sharing',
+    'Hơn 18 năm làm việc trong lĩnh vực chăm sóc sức khỏe giúp tôi hiểu rằng một cuộc sống khỏe mạnh không đến từ những giải pháp ngắn hạn, mà được xây dựng từ tư duy đúng, thói quen tốt và sự kiên trì mỗi ngày.': 'More than 18 years in healthcare have taught me that a healthy life does not come from short-term solutions. It is built through the right mindset, positive habits, and daily consistency.',
+    'Hiểu cơ thể': 'Understand your body',
+    'Từ kiến thức chuyên môn và kinh nghiệm thực tế, tôi giúp mỗi người hiểu cơ thể, thay đổi cách nhìn nhận về sức khỏe, hình thành những thói quen tích cực và từng bước xây dựng một lối sống khỏe mạnh, cân bằng và bền vững.': 'Drawing on professional knowledge and real-world experience, I help people understand their bodies, reshape how they view health, develop positive habits, and gradually build a healthy, balanced, and sustainable lifestyle.',
+    'Tôi tin rằng sự thay đổi không đến từ những lời hứa hay giải pháp tức thời. Vì vậy, tôi trực tiếp dẫn dắt bằng tư duy đúng, phương pháp phù hợp và một lộ trình đủ rõ ràng để mỗi người tạo nên phiên bản tốt hơn của chính mình.': 'I believe change does not come from promises or quick fixes. I therefore provide direct guidance through the right mindset, a suitable method, and a clear roadmap that helps each person become a better version of themselves.',
+    'Dược sĩ Đại học Dược Hà Nội — 18 năm ngành Dược': 'Hanoi University of Pharmacy graduate — 18 years in pharmacy',
+    'Lan tỏa kiến thức về sức khỏe, dinh dưỡng và lối sống lành mạnh': 'Sharing knowledge about health, nutrition, and healthy living',
+    'Diễn giả chia sẻ về sức khỏe, lối sống và phát triển bản thân': 'Speaker on health, lifestyle, and personal development',
+    'Dẫn dắt để': 'Guiding you to',
+    'Tư duy là nền tảng.': 'Mindset is the foundation.',
+    'Mỗi thay đổi tích cực đều bắt đầu từ cách chúng ta nhìn nhận sức khỏe, hiểu cơ thể và lựa chọn chăm sóc bản thân mỗi ngày.': 'Every positive change begins with how we view health, understand our bodies, and choose to care for ourselves each day.',
+    'Thói quen tạo nên kết quả.': 'Habits create results.',
+    'Những hành động nhỏ được duy trì đều đặn sẽ tạo nên sự thay đổi bền vững về vóc dáng, sức khỏe và chất lượng cuộc sống.': 'Small actions practiced consistently create lasting improvements in physique, health, and quality of life.',
+    'Dẫn dắt để tạo ra thay đổi.': 'Guidance that creates change.',
+    'Tôi biến kiến thức và kinh nghiệm thành một lộ trình phù hợp, giúp mỗi người đi từ nhận thức đến hành động và duy trì kết quả lâu dài.': 'I turn knowledge and experience into a suitable roadmap, helping each person move from awareness to action and maintain long-term results.',
+    'Cùng xây dựng một cuộc sống khỏe mạnh hơn →': 'Let’s build a healthier life →',
+    'Những chia sẻ thực tế từ hành trình 18 năm ngành Dược — về sức khoẻ, vóc dáng, và cách sống khoẻ.': 'Practical insights from 18 years in pharmacy — covering health, physique, and healthier living.',
+    'Đặt lịch tư vấn miễn phí — Quỳnh Trang sẽ thiết kế chương trình riêng cho bạn.': 'Book a free consultation — Quỳnh Trang will design a personalized program for you.',
+    'Đặt lịch ngay →': 'Book now →',
+    'Sẵn sàng': 'Ready for',
+    'Điền form hoặc nhắn tin trực tiếp. Quỳnh Trang sẽ phản hồi trong 24 giờ, xác định điểm bạn cần thay đổi và thiết kế một lộ trình riêng phù hợp với bạn.': 'Complete the form or send a direct message. Quỳnh Trang will respond within 24 hours, identify what you would like to change, and design a roadmap tailored to you.',
+    'Chat trực tiếp qua Facebook': 'Chat directly on Facebook',
+    'Địa chỉ': 'Address',
+    'Đăng ký tư vấn': 'Book a consultation',
+    'Gửi yêu cầu tư vấn →': 'Request a consultation →',
+    'Chị Quỳnh Trang sẽ liên hệ bạn trong vòng 24 giờ.': 'Quỳnh Trang will contact you within 24 hours.',
+    'Cảm ơn bạn đã tin tưởng và đồng hành cùng tôi 🌿': 'Thank you for your trust 🌿',
+    'Kiến thức được': 'Knowledge',
+    'Những video, hình ảnh và khoảnh khắc thực tế ghi lại hành trình chia sẻ kiến thức, lan tỏa lối sống khỏe mạnh và đồng hành cùng cộng đồng trên con đường chăm sóc sức khỏe.': 'Videos, images, and real moments capturing a journey of sharing knowledge, promoting healthy living, and helping the community care for their health.',
+    'Tôi luôn sẵn sàng lắng nghe, chia sẻ kiến thức và đồng hành cùng bạn trên hành trình xây dựng một cuộc sống khỏe mạnh và cân bằng hơn.': 'I am always ready to listen, share practical knowledge, and guide you toward a healthier, more balanced life.',
+    'Những chia sẻ': 'Real stories',
+    'Mỗi lời chia sẻ dưới đây là một kết quả thực tế từ lộ trình do Quỳnh Trang trực tiếp hướng dẫn. Sự thay đổi không chỉ nằm ở vóc dáng hay sức khỏe, mà còn ở tư duy, thói quen và cách mỗi người chủ động tận hưởng cuộc sống mỗi ngày.': 'Each story below reflects a real outcome from a roadmap personally guided by Quỳnh Trang. The transformation goes beyond physique and health to include mindset, habits, and how each person actively enjoys daily life.',
+    'Chị T.': 'Ms. T.',
+    'Chị M.': 'Ms. M.',
+    'Chị H.': 'Ms. H.',
+    '"Tôi bắt đầu vì muốn cải thiện vóc dáng, nhưng điều nhận lại còn nhiều hơn thế. Cơ thể khỏe hơn, lưng đỡ đau và tôi cũng tự tin hơn trong cuộc sống."': '"I started because I wanted to improve my physique, but I gained much more. My body feels healthier, my back hurts less, and I feel more confident in life."',
+    '"Điều khiến tôi hạnh phúc không phải chỉ là cân nặng thay đổi, mà là mỗi ngày đều cảm thấy cơ thể khỏe hơn và tràn đầy năng lượng."': '"What makes me happy is not only the change in my weight, but feeling healthier and more energetic every day."',
+    '"Lưng thẳng, người nhẹ, không còn đau — 3 tháng mà tôi như sống lại một lần nữa."': '"My back is straighter, my body feels lighter, and the pain is gone — after three months, I feel alive again."',
+    'Những câu chuyện và chia sẻ mới sẽ được cập nhật thường xuyên để lan tỏa thêm những giá trị tích cực về sức khỏe và lối sống.': 'New stories will be added regularly to share more positive values around health and lifestyle.',
+    'Từ tư duy đúng': 'From the right mindset',
+    'đến những thay đổi bền vững': 'to lasting transformation',
+    'Mỗi câu chuyện là kết quả của một lộ trình thay đổi rõ ràng: điều chỉnh tư duy, hình thành thói quen tích cực, cải thiện vóc dáng và xây dựng sức khỏe bền vững. Quỳnh Trang trực tiếp dẫn dắt từng bước để thay đổi không chỉ được tạo ra, mà còn được duy trì trong cuộc sống mỗi ngày.': 'Every story is the result of a clear transformation roadmap: reshaping mindset, developing positive habits, improving physique, and building lasting health. Quỳnh Trang guides each step so change is not only achieved, but sustained in everyday life.',
+    'Nếu bạn đang mong muốn cải thiện sức khỏe, vóc dáng hoặc xây dựng một lối sống lành mạnh hơn, hãy để lại thông tin hoặc liên hệ trực tiếp với tôi. Tôi luôn sẵn sàng lắng nghe, chia sẻ và đồng hành cùng bạn trên hành trình phù hợp nhất.': 'If you want to improve your health, physique, or build a healthier lifestyle, leave your details or contact me directly. I am ready to listen and guide you along the path that suits you best.',
+    'Chỉ mất khoảng 1 phút để lại thông tin. Tôi sẽ liên hệ với bạn trong thời gian sớm nhất để cùng trao đổi.': 'It only takes about one minute to leave your details. I will contact you shortly to discuss your needs.',
+    'Gửi thông tin →': 'Submit details →',
+    'Cảm ơn bạn!': 'Thank you!',
+    'Thông tin của bạn đã được gửi thành công.': 'Your information has been submitted successfully.',
+    'Tôi sẽ liên hệ với bạn trong thời gian sớm nhất.': 'I will contact you shortly.',
+    'Rất mong được đồng hành cùng bạn trên hành trình chăm sóc sức khỏe. 🌿': 'I look forward to guiding you on your health journey. 🌿',
+    'Ví dụ: Nguyễn Văn A': 'For example: Alex Nguyen',
+    'Nhập số điện thoại hoặc Zalo': 'Enter your phone number or Zalo',
+    'Hãy chia sẻ ngắn gọn điều bạn đang quan tâm hoặc mong muốn cải thiện...': 'Briefly share what you are interested in or would like to improve...',
+    'VD: Tôi muốn giảm 8kg, hết đau lưng, cải thiện vóc dáng trong 3 tháng...': 'For example: I want to lose 8 kg, ease back pain, and improve my physique in three months...',
+    'Vui lòng điền họ tên và số điện thoại nhé!': 'Please enter your full name and phone number.',
+    'Về Tôi — Vũ Quỳnh Trang': 'About Me — Vũ Quỳnh Trang',
+    'Liên Hệ — Vũ Quỳnh Trang': 'Contact — Vũ Quỳnh Trang',
+    'Hành Trình Thực Tế — Vũ Quỳnh Trang': 'Real Journeys — Vũ Quỳnh Trang',
     'TƯ VẤN NGAY +': 'GET CONSULTATION +',
     'Dược sĩ · Chuyên gia sức khoẻ & vóc dáng': 'Pharmacist · Health & body-shaping specialist',
-    'Dược sĩ Đại học Dược Hà Nội — 18 năm trong ngành. Đồng hành cùng bạn xây dựng tư duy, thói quen và sức khỏe bền vững từ chính những thay đổi nhỏ mỗi ngày.': 'Hanoi University of Pharmacy graduate with 18 years of experience, helping you build a healthy mindset, lasting habits, and sustainable well-being through small daily changes.',
+    'Dược sĩ Đại học Dược Hà Nội — 18 năm kinh nghiệm. Giúp bạn thay đổi từ tư duy, xây dựng thói quen đúng, cải thiện vóc dáng và kiến tạo sức khỏe bền vững từ gốc.': 'Hanoi University of Pharmacy graduate with 18 years of experience. Helping you transform your mindset, build the right habits, improve your physique, and create lasting health from within.',
     'Diễn giả · Chia sẻ kiến thức sức khoẻ': 'Speaker · Sharing practical health insights',
-    'Tham gia hàng loạt sự kiện với vai trò diễn giả — Lan toả những giá trị giúp mỗi người chủ động chăm sóc sức khoẻ và xây dựng lối sống lành mạnh.': 'Speaking at events to share practical values that empower people to care for their health and build a healthier lifestyle.',
+    'Truyền cảm hứng và dẫn dắt mỗi người biến kiến thức thành hành động — từ thay đổi tư duy đến xây dựng một lối sống khỏe mạnh, chủ động và bền vững.': 'Inspiring and guiding people to turn knowledge into action — from transforming their mindset to building a healthy, proactive, and sustainable lifestyle.',
     'Phương pháp khoa học · Không áp lực': 'Science-based approach · No pressure',
-    'Mỗi thay đổi bền vững đều bắt đầu từ tư duy đúng, thói quen đúng và sự kiên trì mỗi ngày.': 'Every lasting transformation begins with the right mindset, the right habits, and daily consistency.',
+    'Một lộ trình thay đổi toàn diện: tư duy đúng, thói quen đúng, vóc dáng cân đối và sức khỏe bền vững.': 'A complete transformation roadmap: the right mindset, the right habits, a balanced physique, and lasting health.',
     'TRUYỀN': 'INSPIRE',
     'CẢM HỨNG': 'CHANGE',
     'KHOẺ ĐẸP': 'HEALTHY BEAUTY',
@@ -122,9 +186,13 @@
     const key = normalized(original);
     if (!key) return;
     const translated = translations[key];
-    node.nodeValue = language === 'en' && translated
-      ? original.replace(key, translated)
-      : original;
+    if (language === 'en' && translated) {
+      const leadingWhitespace = original.match(/^\s*/)?.[0] || '';
+      const trailingWhitespace = original.match(/\s*$/)?.[0] || '';
+      node.nodeValue = leadingWhitespace + translated + trailingWhitespace;
+    } else {
+      node.nodeValue = original;
+    }
   }
 
   function translateElement(root = document.body) {
@@ -161,6 +229,25 @@
     });
   }
 
+  function updateMetadata() {
+    const title = document.querySelector('title');
+    if (title) {
+      if (!title.dataset.vi) title.dataset.vi = title.textContent;
+      const original = normalized(title.dataset.vi);
+      title.textContent = language === 'en' && translations[original]
+        ? translations[original]
+        : title.dataset.vi;
+    }
+
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      if (!description.dataset.vi) description.dataset.vi = description.content;
+      description.content = language === 'en'
+        ? 'Vũ Quỳnh Trang — pharmacist and health specialist with 18 years of experience, guiding lasting change in mindset, habits, physique, and well-being.'
+        : description.dataset.vi;
+    }
+  }
+
   function applyLanguage(nextLanguage) {
     language = nextLanguage;
     localStorage.setItem(STORAGE_KEY, language);
@@ -168,6 +255,7 @@
     document.documentElement.dataset.language = language;
     observer?.disconnect();
     translateElement();
+    updateMetadata();
     updateToggle();
     observer?.observe(document.body, { childList: true, subtree: true });
     window.dispatchEvent(new CustomEvent('languagechange', { detail: { language } }));
@@ -205,4 +293,12 @@
   } else {
     init();
   }
+
+  window.qtI18n = {
+    get language() { return language; },
+    translate(text) {
+      const key = normalized(text);
+      return language === 'en' && translations[key] ? translations[key] : text;
+    }
+  };
 })();

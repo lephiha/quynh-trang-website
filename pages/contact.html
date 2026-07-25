@@ -77,8 +77,8 @@
         <span class="italic text-green">thay đổi?</span>
       </h1>
       <p class="body-lg fade-up" data-delay="200" style="color:var(--text-soft);margin-top:1rem;max-width:380px;">
-        Điền form hoặc nhắn tin trực tiếp. Quỳnh Trang sẽ phản hồi trong 24 giờ
-        và thiết kế chương trình riêng cho bạn.
+        Điền form hoặc nhắn tin trực tiếp. Quỳnh Trang sẽ phản hồi trong 24 giờ,
+        xác định điểm bạn cần thay đổi và thiết kế một lộ trình riêng phù hợp với bạn.
       </p>
 
       <div class="contact-links fade-up" data-delay="300">
@@ -196,7 +196,9 @@
     const name  = document.getElementById('fName')?.value.trim();
     const phone = document.getElementById('fPhone')?.value.trim();
     if (!name || !phone) {
-      alert('Vui lòng điền họ tên và số điện thoại nhé!');
+      alert(document.documentElement.lang === 'en'
+        ? 'Please enter your full name and phone number.'
+        : 'Vui lòng điền họ tên và số điện thoại nhé!');
       return;
     }
     document.getElementById('formBox').style.display    = 'none';
