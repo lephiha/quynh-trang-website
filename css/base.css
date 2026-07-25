@@ -257,6 +257,32 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .navbar-nav a:hover { color: var(--green-main); }
 .navbar-nav a:hover::after { transform: scaleX(1); }
 .navbar-cta { display: flex; align-items: center; gap: 0.75rem; }
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .32rem;
+  min-width: 68px;
+  height: 36px;
+  padding: 0 .65rem;
+  border: 1px solid rgba(58,122,90,.35);
+  border-radius: var(--radius-full);
+  background: rgba(254,252,248,.78);
+  color: var(--text-muted);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  transition: border-color var(--dur-fast), background var(--dur-fast);
+}
+.language-toggle:hover { border-color: var(--green-main); background: var(--green-foam); }
+.language-toggle i { width: 1px; height: 12px; background: var(--green-pale); }
+.language-toggle [data-lang] { transition: color var(--dur-fast); }
+.language-toggle [data-lang].active { color: var(--green-main); font-weight: 600; }
+.language-toggle-sidebar {
+  width: 100%;
+  margin-bottom: .75rem;
+  background: var(--green-foam);
+}
 .menu-toggle {
   display: none;
   flex-direction: column;
