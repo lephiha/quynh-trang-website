@@ -1,4 +1,13 @@
 (() => {
+  // ── EmailJS config — điền 3 giá trị lấy từ dashboard emailjs.com ──
+  const EMAILJS_SERVICE_ID  = 'service_ubjw77k';
+  const EMAILJS_TEMPLATE_ID = 'template_4shoepp';
+  const EMAILJS_PUBLIC_KEY  = '330pGmBOxaJr9KUc_';
+
+  if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
   const dialog = document.createElement('dialog');
   dialog.id = 'bookingDialog';
   dialog.className = 'booking-dialog';
@@ -53,16 +62,16 @@
           <span>Tôi đồng ý để Quỳnh Trang liên hệ theo thông tin đã cung cấp về yêu cầu đặt lịch này.</span>
         </label>
         <div class="booking-actions">
-          <button type="submit" class="btn btn-primary">Chuẩn bị yêu cầu đặt lịch →</button>
+          <button type="submit" class="btn btn-primary" id="bookingSubmitBtn">Gửi yêu cầu đặt lịch →</button>
         </div>
         <section class="booking-next" id="bookingNextSteps" aria-labelledby="bookingNextTitle" hidden>
-          <h3 id="bookingNextTitle" tabindex="-1">Hoàn tất yêu cầu qua email và Zalo</h3>
-          <p class="booking-next-note">Thông tin mới được chuẩn bị, chưa tự gửi đi. Hãy hoàn tất cả hai bước dưới đây.</p>
-          <div class="booking-step">
+          <h3 id="bookingNextTitle" tabindex="-1">Bước cuối: nhắn qua Zalo</h3>
+          <p class="booking-next-note" id="bookingEmailStatusNote">Email đã được gửi tự động. Zalo chưa hỗ trợ gửi thẳng nên nội dung đã được sao chép — chỉ cần dán và bấm Gửi.</p>
+          <div class="booking-step" id="bookingEmailFallbackStep" hidden>
             <span class="booking-step-number" aria-hidden="true">1</span>
             <div>
-              <h4>Gửi email</h4>
-              <p>Mở bản nháp đã điền sẵn, kiểm tra rồi bấm Gửi trong ứng dụng email.</p>
+              <h4>Gửi email (thủ công)</h4>
+              <p>Gửi email tự động không thành công. Mở bản nháp đã điền sẵn, kiểm tra rồi bấm Gửi trong ứng dụng email.</p>
               <div class="booking-step-actions">
                 <a id="bookingEmailLink" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Mở Gmail →</a>
                 <a id="bookingMailLink" class="booking-text-link">Dùng ứng dụng email khác</a>
@@ -73,9 +82,9 @@
             <span class="booking-step-number" aria-hidden="true">2</span>
             <div>
               <h4>Nhắn qua Zalo</h4>
-              <p>Sao chép nội dung, mở Zalo của Quỳnh Trang, dán vào cuộc trò chuyện rồi bấm Gửi.</p>
+              <p>Zalo vừa được mở ở tab mới, nội dung đã có sẵn trong bộ nhớ tạm — dán vào khung chat rồi bấm Gửi.</p>
               <div class="booking-step-actions">
-                <button type="button" id="bookingCopy" class="btn btn-outline">Sao chép nội dung</button>
+                <button type="button" id="bookingCopy" class="btn btn-outline">Sao chép lại nội dung</button>
                 <a href="https://zalo.me/0904170485" target="_blank" rel="noopener noreferrer" class="booking-text-link">Mở Zalo →</a>
               </div>
             </div>
@@ -98,7 +107,20 @@
   const emailLink = dialog.querySelector('#bookingEmailLink');
   const mailLink = dialog.querySelector('#bookingMailLink');
   const copyButton = dialog.querySelector('#bookingCopy');
+  const submitBtn = dialog.querySelector('#bookingSubmitBtn');
+  const emailStatusNote = dialog.querySelector('#bookingEmailStatusNote');
+  const emailFallbackStep = dialog.querySelector('#bookingEmailFallbackStep');
   let opener = null;
+
+  async function copyToClipboard(text) {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      return false;
+    }
+  }
 
   const translate = text => window.qtI18n?.translate(text) || text;
 
@@ -132,7 +154,7 @@
   form.addEventListener('input', invalidatePreparedRequest);
   form.addEventListener('change', invalidatePreparedRequest);
 
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', async event => {
     event.preventDefault();
 
     const data = new FormData(form);
@@ -142,13 +164,14 @@
       business: 'Cơ hội kinh doanh',
       other: 'Nội dung khác',
     };
+    const interestLabel = interestLabels[value('interest')] || value('interest');
     const message = [
       'YÊU CẦU ĐẶT LỊCH TƯ VẤN',
       '',
       `Họ và tên: ${value('name')}`,
       `Email: ${value('email')}`,
       `Số điện thoại / Zalo: ${value('phone')}`,
-      `Nội dung muốn trao đổi: ${interestLabels[value('interest')] || value('interest')}`,
+      `Nội dung muốn trao đổi: ${interestLabel}`,
       `Biết đến Quỳnh Trang qua: ${value('source') || 'Không cung cấp'}`,
       `Điều muốn chia sẻ: ${value('message') || 'Không cung cấp'}`,
       `Thời gian thuận tiện: ${value('availability')}`,
@@ -156,12 +179,51 @@
     const subject = `Yêu cầu đặt lịch tư vấn - ${value('name')}`;
     const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('vuquynhtrang@coreplus.vn')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     const mailtoUrl = `mailto:vuquynhtrang@coreplus.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
     emailLink.href = emailUrl;
     mailLink.href = mailtoUrl;
     preview.value = message;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Đang gửi...';
+
+    let emailSent = false;
+    try {
+      if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        throw new Error('EmailJS chưa được cấu hình');
+      }
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: value('name'),
+        from_email: value('email'),
+        phone: value('phone'),
+        interest: interestLabel,
+        source: value('source') || 'Không cung cấp',
+        message: value('message') || 'Không cung cấp',
+        availability: value('availability'),
+      });
+      emailSent = true;
+    } catch (err) {
+      console.error('EmailJS send error', err);
+      emailSent = false;
+    }
+
+    const copied = await copyToClipboard(message);
+    window.open('https://zalo.me/0904170485', '_blank', 'noopener,noreferrer');
+
+    emailFallbackStep.hidden = emailSent;
+    if (emailSent) {
+      emailStatusNote.textContent = translate(copied
+        ? 'Email đã được gửi tự động. Zalo vừa mở ở tab mới, nội dung đã copy sẵn — dán và bấm Gửi.'
+        : 'Email đã được gửi tự động. Zalo vừa mở ở tab mới — bấm "Sao chép lại nội dung" rồi dán vào khung chat.');
+    } else {
+      emailStatusNote.textContent = translate(copied
+        ? 'Gửi email tự động chưa thành công, hãy gửi thủ công ở bước 1. Zalo vừa mở ở tab mới, nội dung đã copy sẵn.'
+        : 'Gửi email tự động chưa thành công, hãy gửi thủ công ở bước 1. Zalo vừa mở ở tab mới — bấm "Sao chép lại nội dung" rồi dán.');
+    }
+
     nextSteps.hidden = false;
-    status.textContent = translate('Nội dung đã sẵn sàng. Hãy gửi email và tin nhắn Zalo ở hai bước bên dưới.');
+    status.textContent = '';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Gửi yêu cầu đặt lịch →';
     dialog.querySelector('#bookingNextTitle').focus();
   });
 
