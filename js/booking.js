@@ -53,11 +53,39 @@
           <span>Tôi đồng ý để Quỳnh Trang liên hệ theo thông tin đã cung cấp về yêu cầu đặt lịch này.</span>
         </label>
         <div class="booking-actions">
-          <button type="submit" class="btn btn-primary">Gửi yêu cầu đặt lịch →</button>
+          <button type="submit" class="btn btn-primary">Chuẩn bị yêu cầu đặt lịch →</button>
         </div>
-        <p class="booking-status" id="bookingStatus" role="status" tabindex="-1" hidden>
-          Email và Zalo đang được mở. Hãy xác nhận gửi yêu cầu trong cả hai ứng dụng.
-        </p>
+        <section class="booking-next" id="bookingNextSteps" aria-labelledby="bookingNextTitle" hidden>
+          <h3 id="bookingNextTitle" tabindex="-1">Hoàn tất yêu cầu qua email và Zalo</h3>
+          <p class="booking-next-note">Thông tin mới được chuẩn bị, chưa tự gửi đi. Hãy hoàn tất cả hai bước dưới đây.</p>
+          <div class="booking-step">
+            <span class="booking-step-number" aria-hidden="true">1</span>
+            <div>
+              <h4>Gửi email</h4>
+              <p>Mở bản nháp đã điền sẵn, kiểm tra rồi bấm Gửi trong ứng dụng email.</p>
+              <div class="booking-step-actions">
+                <a id="bookingEmailLink" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Mở Gmail →</a>
+                <a id="bookingMailLink" class="booking-text-link">Dùng ứng dụng email khác</a>
+              </div>
+            </div>
+          </div>
+          <div class="booking-step">
+            <span class="booking-step-number" aria-hidden="true">2</span>
+            <div>
+              <h4>Nhắn qua Zalo</h4>
+              <p>Sao chép nội dung, mở Zalo của Quỳnh Trang, dán vào cuộc trò chuyện rồi bấm Gửi.</p>
+              <div class="booking-step-actions">
+                <button type="button" id="bookingCopy" class="btn btn-outline">Sao chép nội dung</button>
+                <a href="https://zalo.me/0904170485" target="_blank" rel="noopener noreferrer" class="booking-text-link">Mở Zalo →</a>
+              </div>
+            </div>
+          </div>
+          <details class="booking-preview-wrap">
+            <summary>Xem nội dung yêu cầu để sao chép thủ công</summary>
+            <textarea id="bookingPreview" readonly aria-label="Nội dung yêu cầu đặt lịch"></textarea>
+          </details>
+          <p class="booking-status" id="bookingStatus" role="status" aria-live="polite"></p>
+        </section>
       </form>
     </div>
   `;
@@ -65,11 +93,17 @@
 
   const form = dialog.querySelector('form');
   const status = dialog.querySelector('#bookingStatus');
+  const nextSteps = dialog.querySelector('#bookingNextSteps');
+  const preview = dialog.querySelector('#bookingPreview');
+  const emailLink = dialog.querySelector('#bookingEmailLink');
+  const mailLink = dialog.querySelector('#bookingMailLink');
+  const copyButton = dialog.querySelector('#bookingCopy');
   let opener = null;
+
+  const translate = text => window.qtI18n?.translate(text) || text;
 
   function openBooking(trigger = null) {
     opener = trigger?.closest('.sidebar') ? document.getElementById('menuToggle') : trigger;
-    status.hidden = true;
     dialog.showModal();
     document.body.classList.add('booking-open');
     dialog.querySelector('#bookingName').focus();
@@ -90,6 +124,13 @@
     document.body.classList.remove('booking-open');
     opener?.focus();
   });
+
+  const invalidatePreparedRequest = () => {
+    nextSteps.hidden = true;
+    status.textContent = '';
+  };
+  form.addEventListener('input', invalidatePreparedRequest);
+  form.addEventListener('change', invalidatePreparedRequest);
 
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -114,20 +155,27 @@
     ].join('\n');
     const subject = `Yêu cầu đặt lịch tư vấn - ${value('name')}`;
     const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('vuquynhtrang@coreplus.vn')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    const zaloUrl = 'https://zalo.me/0904170485';
+    const mailtoUrl = `mailto:vuquynhtrang@coreplus.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-    status.hidden = false;
-    status.textContent = 'Email và Zalo đang được mở. Nội dung đã được sao chép để bạn dán vào Zalo; hãy xác nhận gửi trong cả hai ứng dụng.';
-    status.focus();
+    emailLink.href = emailUrl;
+    mailLink.href = mailtoUrl;
+    preview.value = message;
+    nextSteps.hidden = false;
+    status.textContent = translate('Nội dung đã sẵn sàng. Hãy gửi email và tin nhắn Zalo ở hai bước bên dưới.');
+    dialog.querySelector('#bookingNextTitle').focus();
+  });
 
-    const zaloWindow = window.open(zaloUrl, '_blank', 'noopener,noreferrer');
-    if (zaloWindow) zaloWindow.opener = null;
-
-    navigator.clipboard.writeText(message).catch(() => {
-      status.textContent = 'Email và Zalo đang được mở. Hãy xác nhận gửi email và nhập nội dung yêu cầu trong Zalo.';
-    });
-
-    window.location.href = emailUrl;
+  copyButton.addEventListener('click', async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(preview.value);
+      status.textContent = translate('Đã sao chép nội dung. Hãy mở Zalo, dán và bấm Gửi.');
+    } catch {
+      dialog.querySelector('.booking-preview-wrap').open = true;
+      preview.focus();
+      preview.select();
+      status.textContent = translate('Không thể sao chép tự động. Nội dung đã được chọn; hãy sao chép thủ công rồi dán vào Zalo.');
+    }
   });
 
   if (window.location.hash === '#booking') openBooking();

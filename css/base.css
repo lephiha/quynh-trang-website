@@ -87,6 +87,37 @@ a   { color: inherit; text-decoration: none; }
 ul  { list-style: none; }
 button { cursor: pointer; border: none; background: none; font: inherit; }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 5001;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: var(--green-deep);
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--green-main);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--warm-white);
+}
+
 /* ── Typography Scale ─────────────────────── */
 .display-xl {
   font-family: var(--font-display);
@@ -517,6 +548,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   box-shadow: 0 8px 24px rgba(58,122,90,0.28);
 }
 .fab .fab-tip { font-size: 0.85rem; color: var(--text-dark); background: var(--cream); padding: 0.4rem 0.6rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-up, .fade-in, .scale-in, [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 @media (min-width: 900px) {
   .fab { right: 28px; bottom: 28px; }

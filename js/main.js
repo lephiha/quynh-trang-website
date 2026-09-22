@@ -15,35 +15,50 @@ const sidebar    = document.getElementById('sidebar');
 const backdrop   = document.getElementById('sidebarBackdrop');
 const menuToggle = document.getElementById('menuToggle'); // dùng id, không dùng class
 const sidebarClose = document.getElementById('sidebarClose');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function openSidebar() {
   if (!sidebar) return;
+  sidebar.inert = false;
   sidebar.classList.add('open');
   sidebar.setAttribute('aria-hidden', 'false');
+  menuToggle.setAttribute('aria-expanded', 'true');
   backdrop && backdrop.classList.add('open');
   document.body.style.overflow = 'hidden';
-  try { console.debug('openSidebar() called'); } catch (e) {}
+  sidebarClose.focus();
 }
 
-function closeSidebar() {
-  if (!sidebar) return;
+function closeSidebar(restoreFocus = true) {
+  if (!sidebar || !sidebar.classList.contains('open')) return;
+  if (restoreFocus && menuToggle) menuToggle.focus();
   sidebar.classList.remove('open');
   sidebar.setAttribute('aria-hidden', 'true');
+  sidebar.inert = true;
+  menuToggle.setAttribute('aria-expanded', 'false');
   backdrop && backdrop.classList.remove('open');
   document.body.style.overflow = '';
-  try { console.debug('closeSidebar() called'); } catch (e) {}
 }
 
 menuToggle   && menuToggle.addEventListener('click', openSidebar);
-sidebarClose && sidebarClose.addEventListener('click', closeSidebar);
-backdrop     && backdrop.addEventListener('click', closeSidebar);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
+sidebarClose && sidebarClose.addEventListener('click', () => closeSidebar());
+backdrop     && backdrop.addEventListener('click', () => closeSidebar());
+document.addEventListener('keydown', e => {
+  if (!sidebar?.classList.contains('open')) return;
+  if (e.key === 'Escape') { closeSidebar(); return; }
+  if (e.key !== 'Tab') return;
+  const focusable = Array.from(sidebar.querySelectorAll('a, button:not([disabled])'));
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
 
 // Đóng khi click link trong sidebar
 sidebar && sidebar.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
-    // Chỉ đóng nếu là anchor link (không phải link ngoài)
-    closeSidebar();
+    // Booking dialog manages its own focus after the menu closes.
+    closeSidebar(!a.hasAttribute('data-booking'));
   });
 });
 
@@ -68,14 +83,9 @@ document.addEventListener('touchstart', (e) => {
   }
 }, { passive: true });
 
-// Debug info to help track down attach failures in devtools
-try {
-  console.debug('SIDEBAR:', { sidebar: !!sidebar, backdrop: !!backdrop, menuToggle: !!menuToggle, sidebarClose: !!sidebarClose });
-} catch (err) {}
-
 // ── Scroll reveal ───────────────────────────
 const revealEls = document.querySelectorAll('.fade-up, .fade-in, .scale-in');
-const observer  = new IntersectionObserver((entries) => {
+const observer = reduceMotion ? null : new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity   = '1';
@@ -84,11 +94,12 @@ const observer  = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
-revealEls.forEach(el => observer.observe(el));
+if (observer) revealEls.forEach(el => observer.observe(el));
 
 // ── Stagger children ────────────────────────
 document.querySelectorAll('[data-stagger]').forEach(parent => {
   Array.from(parent.children).forEach((child, i) => {
+    if (reduceMotion) return;
     child.style.opacity    = '0';
     child.style.transform  = 'translateY(40px)';
     child.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
@@ -101,7 +112,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     if (a.hasAttribute('data-booking')) return;
     const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      if (a.classList.contains('skip-link')) target.focus({ preventScroll: true });
+    }
   });
 });
 
@@ -141,7 +156,8 @@ if (statNum) {
   const counterObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        animateCounter(statNum, parseInt(statNum.dataset.target));
+        if (reduceMotion) statNum.textContent = statNum.dataset.target + (statNum.dataset.suffix || '+');
+        else animateCounter(statNum, parseInt(statNum.dataset.target));
         counterObs.unobserve(entry.target);
       }
     });

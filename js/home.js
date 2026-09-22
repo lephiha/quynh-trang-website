@@ -31,6 +31,7 @@ let curSlide    = 0;
 let isAnimating = false;
 const sInner    = document.getElementById('sliderInner');
 const sDots     = document.getElementById('sliderDots');
+const homeReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 CORE.slides.forEach((s, i) => {
   // Tách title: dòng 1 trắng, dòng 2 đỏ
@@ -139,6 +140,15 @@ function goSlide(n) {
 
   dots.forEach((d, i) => d.classList.toggle('is-active', i === curSlide));
 
+  if (homeReduceMotion || typeof gsap === 'undefined') {
+    prevSlide.style.display = 'none';
+    prevSlide.classList.remove('is-active');
+    nextSlide.style.display = 'flex';
+    nextSlide.classList.add('is-active');
+    isAnimating = false;
+    return;
+  }
+
   // Hiện slide mới, đặt z-index
   gsap.set(nextSlide, { display: 'flex', zIndex: 2 });
   gsap.set(prevSlide, { zIndex: 1 });
@@ -157,10 +167,22 @@ function goSlide(n) {
 
 function changeSlide(d) { goSlide(curSlide + d); }
 
-// Auto-play
-let autoS = setInterval(() => changeSlide(1), 5000);
-sInner.addEventListener('mouseenter', () => clearInterval(autoS));
-sInner.addEventListener('mouseleave', () => { autoS = setInterval(() => changeSlide(1), 5000); });
+// Auto-play is disabled when the visitor requests reduced motion.
+let autoS;
+function startAutoPlay() {
+  if (!homeReduceMotion && !autoS) autoS = setInterval(() => changeSlide(1), 5000);
+}
+function stopAutoPlay() {
+  clearInterval(autoS);
+  autoS = null;
+}
+if (!homeReduceMotion) startAutoPlay();
+sInner.addEventListener('mouseenter', stopAutoPlay);
+sInner.addEventListener('mouseleave', startAutoPlay);
+sInner.addEventListener('focusin', stopAutoPlay);
+sInner.addEventListener('focusout', e => {
+  if (!sInner.contains(e.relatedTarget)) startAutoPlay();
+});
 
 // Touch swipe
 let touchX = 0;
@@ -175,7 +197,7 @@ document.getElementById('sliderOuter').addEventListener('touchend', e => {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Wait for GSAP to load
-  if (typeof gsap === 'undefined') return;
+  if (homeReduceMotion || typeof gsap === 'undefined') return;
 
   gsap.registerPlugin(ScrollTrigger);
 

@@ -17,6 +17,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
 
 <!-- ══════════════════════════════════════════
      NAVBAR
@@ -42,7 +43,7 @@
 
   <div class="navbar-cta">
     <a href="#contact" class="btn btn-outline" data-booking>Đặt Lịch Tư Vấn</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="sidebar">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -51,7 +52,7 @@
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
  
 <!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar" aria-hidden="true">
+<aside class="sidebar" id="sidebar" aria-hidden="true" inert>
   <div class="sidebar-header">
     <div class="sidebar-brand">
       <img src="./assets/logo.png" alt="Logo" class="sidebar-brand-img"/>
@@ -75,6 +76,8 @@
   </div>
 </aside>
 
+<main id="main-content" tabindex="-1">
+<h1 class="sr-only">Vũ Quỳnh Trang — đồng hành chăm sóc sức khỏe và vóc dáng</h1>
 <!-- HERO SLIDER -->
 <section id="hero">
   <div id="slider-section">
@@ -422,6 +425,7 @@
 <!-- ══════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════ -->
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <a href="index.html" class="navbar-logo">
