@@ -180,6 +180,34 @@
 .about-features { gap: 0.55rem; }
 .about-feature { font-size: 0.84rem; }
 
+/* ── VALUES ─────────────────────────────── */
+.values-section {
+  width: auto;
+  margin: .75rem 4vw 0;
+  padding: 3.5rem 5vw;
+  border-radius: 24px;
+}
+.values-header { margin-bottom: 2rem; }
+.values-grid { grid-template-columns: 1fr; gap: .85rem; }
+.value-card {
+  min-height: 0;
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  column-gap: 1rem;
+  text-align: left;
+}
+.value-icon { width: 60px; height: 60px; margin: 0; grid-row: 1 / span 2; }
+.value-icon svg { width: 30px; height: 30px; }
+.value-card h3 { align-self: end; margin-bottom: .35rem; font-size: .88rem; }
+.value-card p { font-size: .84rem; line-height: 1.65; }
+.values-outcomes { margin-top: 2.25rem; }
+.values-outcomes-title { gap: .75rem; }
+.values-outcomes-title h3 { font-size: .72rem; letter-spacing: .15em; }
+.values-outcomes-list { flex-direction: column; align-items: stretch; gap: .5rem; }
+.value-outcome { width: 100%; }
+.values-closing { margin-top: 1.35rem; font-size: 1.35rem; }
+
 /* ── STORIES ────────────────────────────── */
 .stories-section {
   padding: 3.5rem 6vw;
