@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/home.css" />
   <link rel="stylesheet" href="../css/blog.css" />
   <link rel="stylesheet" href="../css/mobile.css" />
+  <link rel="stylesheet" href="../css/booking.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -25,14 +26,12 @@
   <nav class="navbar-nav" id="navMenu">
     <a href="../index.html">Trang Chủ</a>
     <a href="about.html">Về Tôi</a>
-    <a href="stories.html">Hành Trình</a>
     <a href="media.html">Multimedia Zone</a>
-    <a href="reviews.html">Reviews</a>
     <a href="blog.html" class="nav-active">Blog</a>
-    <a href="contact.html">Liên Hệ</a>
+    <a href="../index.html#contact">Liên Hệ</a>
   </nav>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-outline">Đặt Lịch Tư Vấn</a>
+    <a href="../index.html#contact" class="btn btn-outline" data-booking>Đặt Lịch Tư Vấn</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -53,14 +52,12 @@
   <nav class="sidebar-nav-links">
     <a href="../index.html">Trang Chủ</a>
     <a href="about.html">Về Tôi</a>
-    <a href="stories.html">Hành Trình</a>
     <a href="media.html">Multimedia Zone</a>
-    <a href="reviews.html">Reviews</a>
     <a href="blog.html">Blog</a>
-    <a href="contact.html">Liên Hệ</a>
+    <a href="../index.html#contact">Liên Hệ</a>
   </nav>
   <div class="sidebar-cta-wrap">
-    <a href="contact.html" class="btn btn-primary">Đặt Lịch Tư Vấn</a>
+    <a href="../index.html#contact" class="btn btn-primary" data-booking>Đặt Lịch Tư Vấn</a>
   </div>
 </aside>
 
@@ -235,7 +232,7 @@
     <p class="body-lg fade-up" data-delay="100" style="color:var(--text-soft);margin-top:.75rem;">
       Đặt lịch tư vấn miễn phí — Quỳnh Trang sẽ thiết kế chương trình riêng cho bạn.
     </p>
-    <a href="contact.html" class="btn btn-primary fade-up" data-delay="200" style="margin-top:1.75rem;">
+    <a href="../index.html#contact" class="btn btn-primary fade-up" data-booking data-delay="200" style="margin-top:1.75rem;">
       Đặt lịch ngay →
     </a>
   </div>
@@ -254,11 +251,8 @@
     </a>
     <nav class="footer-nav">
       <a href="about.html">Về Tôi</a>
-      <a href="stories.html">Hành Trình</a>
       <a href="media.html">Multimedia Zone</a>
-      <a href="reviews.html">Reviews</a>
       <a href="blog.html">Blog</a>
-      <a href="contact.html">Liên Hệ</a>
     </nav>
     <span class="footer-copy">© 2026 Vũ Quỳnh Trang. All rights reserved.</span>
   </div>
@@ -266,6 +260,7 @@
 
 <script src="../js/main.js"></script>
 <script src="../js/i18n.js"></script>
+<script src="../js/booking.js"></script>
 <script>
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.blog-full-card');

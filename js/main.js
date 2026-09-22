@@ -99,6 +99,7 @@ document.querySelectorAll('[data-stagger]').forEach(parent => {
 // ── Smooth scroll ───────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
+    if (a.hasAttribute('data-booking')) return;
     const target = document.querySelector(a.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
@@ -155,15 +156,17 @@ if (statNum) {
     fab.id = 'fab'; fab.className = 'fab';
 
     const zalo = document.createElement('a');
-    zalo.href = 'https://zalo.me/0983068530';
-    zalo.target = '_blank'; zalo.rel = 'noopener';
+    zalo.href = 'https://zalo.me/0904170485';
+    zalo.target = '_blank'; zalo.rel = 'noopener noreferrer';
     zalo.className = 'fab-btn fab-sub fab-zalo';
     zalo.id = 'fabZalo';
-    zalo.innerHTML = '<img src="https://page.widget.zalo.me/static/images/2.0/Logo.svg" width="24" height="24" alt="Zalo">';
+    zalo.setAttribute('aria-label', 'Nhắn tin qua Zalo');
+    zalo.innerHTML = '<svg aria-hidden="true" width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M8 5h16a5 5 0 0 1 5 5v11a5 5 0 0 1-5 5H11l-5 3v-4a5 5 0 0 1-3-4V10a5 5 0 0 1 5-5Z" fill="#fff"/><text x="16" y="19" text-anchor="middle" fill="#0068ff" font-family="Arial,sans-serif" font-size="9" font-weight="700">Zalo</text></svg>';
 
     const phone = document.createElement('a');
-    phone.href = 'tel:0983068530';
+    phone.href = 'tel:0904170485';
     phone.className = 'fab-btn fab-sub fab-phone';
+    phone.setAttribute('aria-label', 'Gọi 0904 170 485');
     phone.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.37 2.39.73 3.52a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.56-1.31a2 2 0 0 1 2.11-.45c1.13.36 2.31.61 3.52.73A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
     const main = document.createElement('button');

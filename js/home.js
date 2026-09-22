@@ -43,22 +43,12 @@ CORE.slides.forEach((s, i) => {
 
   const el = document.createElement('div');
   el.className = 'slide' + (i === 0 ? ' is-active' : '');
-  // Determine contact link depending on current page: on the homepage scroll to #contact,
-  // on pages use a relative contact page link.
-  const contactHref = (function(){
-    const p = window.location.pathname || '';
-    if (p.endsWith('/') || p.endsWith('index.html')) return '#contact';
-    // If we're inside /pages/ (e.g. pages/blog.html) the contact page is relative
-    if (p.includes('/pages/')) return 'contact.html';
-    return 'pages/contact.html';
-  })();
-
   el.innerHTML = `
     <div class="slide-content">
       <p  class="slide-tag">${s.tag}</p>
       <h2 class="slide-title">${titleHTML}</h2>
       <p  class="slide-desc">${s.desc}</p>
-      <a  class="slide-cta" href="${contactHref}">TƯ VẤN NGAY +</a>
+      <a  class="slide-cta" href="#contact" data-booking>TƯ VẤN NGAY +</a>
     </div>
     <div class="slide-img-wrap">
       <div class="slide-placeholder">${s.emoji || ''}</div>
@@ -315,18 +305,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Contact Form ──────────────────────────
-function submitContactForm() {
-  const name  = document.getElementById('fName')?.value.trim();
-  const phone = document.getElementById('fPhone')?.value.trim();
-  const goal  = document.getElementById('fGoal')?.value.trim();
-  if (!name || !phone) {
-    alert(document.documentElement.lang === 'en'
-      ? 'Please enter your full name and phone number.'
-      : 'Vui lòng điền họ tên và số điện thoại nhé!');
-    return;
-  }
-  document.getElementById('formBox').style.display    = 'none';
-  document.getElementById('formSuccess').style.display = 'flex';
-}
-
 lucide.createIcons();
