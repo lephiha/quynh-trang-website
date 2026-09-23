@@ -1,8 +1,8 @@
 (() => {
   // ── EmailJS config — điền 3 giá trị lấy từ dashboard emailjs.com ──
-  const EMAILJS_SERVICE_ID  = 'service_ubjw77k';
-  const EMAILJS_TEMPLATE_ID = 'template_4shoepp';
-  const EMAILJS_PUBLIC_KEY  = '330pGmBOxaJr9KUc_';
+  const EMAILJS_SERVICE_ID  = 'service_58ov9yw';
+  const EMAILJS_TEMPLATE_ID = 'template_5l9w9xy';
+  const EMAILJS_PUBLIC_KEY  = 'ys0L6aeEtyHvK9PVv';
 
   if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
