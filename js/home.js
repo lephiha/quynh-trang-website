@@ -4,21 +4,21 @@ const CORE = {
       tag: 'Dược sĩ · Chuyên gia sức khoẻ & vóc dáng',
       title: 'VŨ QUỲNH\nTRANG',
       desc: 'Dược sĩ Đại học Dược Hà Nội — 18 năm kinh nghiệm. Giúp bạn thay đổi từ tư duy, xây dựng thói quen đúng, cải thiện vóc dáng và kiến tạo sức khỏe bền vững từ gốc.',
-      img: './assets/slider1.png',
+      img: './assets/slider1.webp',
       emoji: '🌿'
     },
     {
       tag: 'Diễn giả · Chia sẻ kiến thức sức khoẻ',
       title: 'TRUYỀN\nCẢM HỨNG',
       desc: 'Truyền cảm hứng và dẫn dắt mỗi người biến kiến thức thành hành động — từ thay đổi tư duy đến xây dựng một lối sống khỏe mạnh, chủ động và bền vững.',
-      img: './assets/slider2.png',
+      img: './assets/slider2.webp',
       emoji: '🎤'
     },
     {
       tag: 'Phương pháp khoa học · Không áp lực',
       title: 'KHOẺ ĐẸP\nTỪ GỐC',
       desc: 'Một lộ trình thay đổi toàn diện: tư duy đúng, thói quen đúng, vóc dáng cân đối và sức khỏe bền vững.',
-      img: './assets/slider1.png',
+      img: './assets/slider1.webp',
       emoji: '✨'
     }
   ]
@@ -57,15 +57,23 @@ CORE.slides.forEach((s, i) => {
 
   if (s.img) {
     const img     = document.createElement('img');
-    img.src       = s.img;
     img.alt       = s.tag;
     img.className = 'slide-bg-img';
+    img.decoding  = 'async';
+    img.loading   = i === 0 ? 'eager' : 'lazy';
+    img.fetchPriority = i === 0 ? 'high' : 'low';
     const wrap    = el.querySelector('.slide-img-wrap');
+    const placeholder = wrap.querySelector('.slide-placeholder');
     img.onload    = () => {
-      wrap.appendChild(img);
-      wrap.querySelector('.slide-placeholder').style.display = 'none';
+      img.classList.add('is-loaded');
+      placeholder.classList.add('is-hidden');
     };
-    img.onerror = () => {};
+    img.onerror = () => {
+      wrap.classList.add('has-image-error');
+      img.remove();
+    };
+    wrap.appendChild(img);
+    img.src = s.img;
   }
 
   sInner.appendChild(el);
