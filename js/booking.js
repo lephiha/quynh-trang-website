@@ -177,8 +177,8 @@
       `Thời gian thuận tiện: ${value('availability')}`,
     ].join('\n');
     const subject = `Yêu cầu đặt lịch tư vấn - ${value('name')}`;
-    const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('vuquynhtrang@coreplus.vn')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    const mailtoUrl = `mailto:vuquynhtrang@coreplus.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('quynhtrang@coreplus.vn')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const mailtoUrl = `mailto:quynhtrang@coreplus.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     emailLink.href = emailUrl;
     mailLink.href = mailtoUrl;
     preview.value = message;
