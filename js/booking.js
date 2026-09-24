@@ -129,6 +129,7 @@
     dialog.showModal();
     document.body.classList.add('booking-open');
     dialog.querySelector('#bookingName').focus();
+    if (window.gtag) gtag('event', 'booking_click', { event_category: 'booking' });
   }
 
   document.addEventListener('click', event => {
@@ -225,6 +226,13 @@
     submitBtn.disabled = false;
     submitBtn.textContent = 'Gửi yêu cầu đặt lịch →';
     dialog.querySelector('#bookingNextTitle').focus();
+    if (window.gtag) {
+      gtag('event', 'booking_submit', {
+        event_category: 'booking',
+        interest: value('interest'),
+        email_sent: emailSent,
+      });
+    }
   });
 
   copyButton.addEventListener('click', async () => {
