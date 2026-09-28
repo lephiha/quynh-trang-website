@@ -17,7 +17,7 @@
       <button type="button" class="booking-close" aria-label="Đóng form đặt lịch">×</button>
       <div class="booking-heading">
         <span class="booking-eyebrow">TRÒ CHUYỆN CÙNG QUỲNH TRANG</span>
-        <h2 id="bookingTitle">Đặt lịch tư vấn</h2>
+        <h2 id="bookingTitle">Đặt lịch ngay</h2>
         <p>Chia sẻ điều bạn quan tâm và thời gian thuận tiện. Quỳnh Trang sẽ cùng bạn trao đổi về bước tiếp theo phù hợp.</p>
       </div>
       <form class="booking-form" id="bookingForm">
@@ -167,7 +167,7 @@
     };
     const interestLabel = interestLabels[value('interest')] || value('interest');
     const message = [
-      'YÊU CẦU ĐẶT LỊCH TƯ VẤN',
+      'YÊU CẦU ĐẶT LỊCH NGAY',
       '',
       `Họ và tên: ${value('name')}`,
       `Email: ${value('email')}`,
@@ -177,7 +177,7 @@
       `Điều muốn chia sẻ: ${value('message') || 'Không cung cấp'}`,
       `Thời gian thuận tiện: ${value('availability')}`,
     ].join('\n');
-    const subject = `Yêu cầu đặt lịch tư vấn - ${value('name')}`;
+    const subject = `Yêu cầu đặt lịch ngay - ${value('name')}`;
     const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('quynhtrang@coreplus.vn')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     const mailtoUrl = `mailto:quynhtrang@coreplus.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     emailLink.href = emailUrl;

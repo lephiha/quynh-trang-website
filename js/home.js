@@ -49,7 +49,7 @@ CORE.slides.forEach((s, i) => {
       <p  class="slide-tag">${s.tag}</p>
       <h2 class="slide-title">${titleHTML}</h2>
       <p  class="slide-desc">${s.desc}</p>
-      <a  class="slide-cta" href="#contact" data-booking>TƯ VẤN NGAY +</a>
+      <a  class="slide-cta" href="#contact" data-booking>ĐẶT LỊCH NGAY +</a>
     </div>
     <div class="slide-img-wrap">
       <div class="slide-placeholder">${s.emoji || ''}</div>

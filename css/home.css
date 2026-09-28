@@ -969,6 +969,7 @@ blog-preview-section { padding-top: var(--space-xl); padding-bottom: var(--space
 .values-section {
   position: relative;
   margin-top: 1.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
   padding: clamp(4.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4rem);
   overflow: hidden;
   border: 1px solid rgba(168, 213, 188, .7);
